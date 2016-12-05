@@ -7,4 +7,19 @@ import java.util.List;
  */
 public class WorkBlockResultRequest {
     List<BattleResultRequest> battleResultRequests;
+
+    protected WorkBlockResultRequest() {
+    }
+
+    public WorkBlockResultRequest(List<BattleResultRequest> battleResultRequests) {
+        this.battleResultRequests = battleResultRequests;
+    }
+
+    public List<BattleResultRequest> getBattleResultRequests() {
+        return battleResultRequests;
+    }
+
+    public void setBattleResultRequests(List<BattleResultRequest> battleResultRequests) {
+        this.battleResultRequests = battleResultRequests;
+    }
 }

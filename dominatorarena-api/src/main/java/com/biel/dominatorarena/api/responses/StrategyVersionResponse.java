@@ -6,11 +6,17 @@ package com.biel.dominatorarena.api.responses;
 public class StrategyVersionResponse {
     Long serverId;
     String code;
+    String name;
     //byte[] compiled;
 
-    public StrategyVersionResponse(Long serverId, String code) {
+
+    public StrategyVersionResponse(Long serverId, String code, String name) {
         this.serverId = serverId;
         this.code = code;
+        this.name = name;
+    }
+
+    protected StrategyVersionResponse() {
     }
 
     public Long getServerId() {
@@ -27,5 +33,13 @@ public class StrategyVersionResponse {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

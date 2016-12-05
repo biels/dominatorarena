@@ -12,11 +12,22 @@ public class ConfigurationResponse {
         this.contents = contents;
     }
 
+    ConfigurationResponse() {
+    }
+
     public String getContents() {
         return contents;
     }
 
     public void setContents(String contents) {
         this.contents = contents;
+    }
+
+    public Long getServerId() {
+        return serverId;
+    }
+
+    public void setServerId(Long serverId) {
+        this.serverId = serverId;
     }
 }

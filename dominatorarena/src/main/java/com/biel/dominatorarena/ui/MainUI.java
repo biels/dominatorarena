@@ -4,6 +4,8 @@ import com.biel.dominatorarena.logic.AutoStrategyVersionImporter;
 import com.biel.dominatorarena.model.entities.Strategy;
 import com.biel.dominatorarena.model.entities.StrategyVersion;
 import com.biel.dominatorarena.model.repositories.StrategyRepository;
+import com.vaadin.addon.jpacontainer.JPAContainer;
+import com.vaadin.data.util.BeanItemContainer;
 import com.vaadin.data.util.IndexedContainer;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.shared.ui.label.ContentMode;
@@ -11,10 +13,12 @@ import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.persistence.EntityManager;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 
 /**
  * Created by Biel on 1/12/2016.
@@ -31,7 +35,7 @@ public class MainUI extends UI {
         content.setHeightUndefined();
         setContent(content);
         content.addComponent(topPanel(content));
-
+        content.addComponent(strategyExplorer());
         HorizontalLayout layoutStrategies = new HorizontalLayout();
         layoutStrategies.setSizeFull();
         content.addComponent(layoutStrategies);
@@ -94,12 +98,18 @@ public class MainUI extends UI {
         strategyVersionPanel.setSizeFull();
         //Tables
         IndexedContainer strategyIndexedContainer = new IndexedContainer();
+        JPAContainer<Strategy> strategyJPAContainer = new JPAContainer<>(Strategy.class);
+        //strategyJPAContainer.setEntityProvider();
+
         strategyIndexedContainer.addContainerProperty("Name", String.class, "[Unnamed]");
         strategyIndexedContainer.addContainerProperty("Volume", Double.class, -1.0D);
 
         Table tblStrategies = new Table("Strategy table", strategyIndexedContainer);
-
-
+        Collection<Strategy> all = strategyRepository.findAll();
+        BeanItemContainer newDataSource = new BeanItemContainer(Strategy.class);
+        newDataSource.addAll(all);
+        tblStrategies.setContainerDataSource(newDataSource);
+        layout.addComponent(tblStrategies);
         return layout;
     }
 }

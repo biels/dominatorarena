@@ -12,6 +12,7 @@ import java.util.List;
  */
 //@RepositoryRestResource
 public interface ConfigurationRepository extends CrudRepository<Configuration, Long> {
+    List<Configuration> findAll();
     List<Configuration> findByStatisticBattles(StatisticBattle statisticBattle);
     List<Configuration> findByBattles_WorkBlock(WorkBlock workBlock);
 }

@@ -10,6 +10,9 @@ public class PlayerResponse {
         this.strategyId = strategyId;
     }
 
+    protected PlayerResponse() {
+    }
+
     public Long getStrategyId() {
         return strategyId;
     }

@@ -18,6 +18,9 @@ public class BattleResponse {
         this.playerResponses = playerResponses;
     }
 
+    protected BattleResponse() {
+    }
+
     public Long getMatchId() {
         return matchId;
     }

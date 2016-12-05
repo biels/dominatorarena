@@ -5,6 +5,7 @@ import com.biel.dominatorarena.api.responses.*;
 import com.biel.dominatorarena.model.entities.WorkBlock;
 import com.biel.dominatorarena.model.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,9 +32,9 @@ public class ExecutorWorkService {
     private ExecutorRepository executorRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    WorkBlockResponse getWork(@PathVariable Long executorId){
+    ResponseEntity<WorkBlockResponse> getWork(@PathVariable Long executorId){
         Optional<WorkBlock> workBlockOptional = workBlockRepository.findOneByExecutor_Id(executorId);
-        if(!workBlockOptional.isPresent())return new WorkBlockResponse(new ArrayList<>(), new ArrayList<>(), new ArrayList<>());
+        if(!workBlockOptional.isPresent())return new ResponseEntity<>(new WorkBlockResponse(new ArrayList<>(), new ArrayList<>(), new ArrayList<>()), HttpStatus.NO_CONTENT);
         WorkBlock workBlock = workBlockOptional.get();
         //Translate to response
 
@@ -52,7 +53,7 @@ public class ExecutorWorkService {
                     return new BattleResponse(battle.getId(), battle.getSeed(), battle.getConfiguration().getId(), playerResponses);
                 })
                 .collect(Collectors.toList());
-        return new WorkBlockResponse(configurationResponses, strategyVersionResponses, battleResponses);
+        return new ResponseEntity<>(new WorkBlockResponse(configurationResponses, strategyVersionResponses, battleResponses), HttpStatus.OK);
     }
     @RequestMapping(method = RequestMethod.POST)
     ResponseEntity<?> postWork(@PathVariable int workerId, @RequestBody WorkBlockResultRequest workBlockResultRequest){
