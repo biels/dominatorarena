@@ -1,5 +1,6 @@
 package com.biel.dominatorarena.logic;
 
+import com.biel.dominatorarena.model.entities.Configuration;
 import com.biel.dominatorarena.model.entities.StatisticBattle;
 import com.biel.dominatorarena.model.entities.Strategy;
 import com.biel.dominatorarena.model.entities.StrategyVersion;
@@ -32,6 +33,7 @@ public class StatisticBattleGenerator {
         return generateStatisticBattleFromVersions(strategyVersions);
     }
     public StatisticBattle generateStatisticBattleFromVersions(List<StrategyVersion> strategyVersions){
-        return statisticBattleRepository.save(new StatisticBattle(strategyVersions, configurationRepository.findAll()));
+        List<Configuration> configurations = configurationRepository.findAll(); //TODO Configuration selection
+        return statisticBattleRepository.save(new StatisticBattle(strategyVersions, configurations));
     }
 }

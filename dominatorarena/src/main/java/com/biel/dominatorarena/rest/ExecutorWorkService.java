@@ -42,7 +42,7 @@ public class ExecutorWorkService {
                 .map(configuration -> new ConfigurationResponse(configuration.getId(), configuration.getContents()))
                 .collect(Collectors.toList());
         List<StrategyVersionResponse> strategyVersionResponses = strategyVersionRepository.findByStatisticBattles_Battles_WorkBlock(workBlock).stream()
-                .map(strategyVersion -> new StrategyVersionResponse(strategyVersion.getId(), strategyVersion.readSource()))
+                .map(strategyVersion -> new StrategyVersionResponse(strategyVersion.getId(), strategyVersion.readSource(), strategyVersion.getStrategy().getName()))
                 .collect(Collectors.toList());
 
         List<BattleResponse> battleResponses = workBlock.getBattles().stream()
