@@ -2,13 +2,21 @@ group 'com.biel.dominatorarena'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'maven-publish'
 
 sourceCompatibility = 1.8
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
-
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
