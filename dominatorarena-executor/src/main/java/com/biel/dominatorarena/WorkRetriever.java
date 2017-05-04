@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -19,12 +20,25 @@ public class WorkRetriever {
     LocalInfo localInfo;
     private ResponseEntity<WorkBlockResponse> getWorkBlockResponse() {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForEntity(localInfo.getMyUri() + "/work", WorkBlockResponse.class);
+        try {
+            return restTemplate.getForEntity(localInfo.getMyUri() + "/work", WorkBlockResponse.class);
+        } catch (RestClientException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
     public WorkBlockResponse getWorkWhenThereIs(){
         ResponseEntity<WorkBlockResponse> workBlockResponse = getWorkBlockResponse();
-        while (workBlockResponse.getStatusCode() != HttpStatus.OK){
-            l.info("No work to do.");
+        while (true){
+            if(workBlockResponse == null){
+                l.info("Server unreachable.");
+                continue;
+            }
+            if(workBlockResponse.getStatusCode() != HttpStatus.OK){
+                l.info("No work to do.");
+            }else{
+                break;
+            }
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
