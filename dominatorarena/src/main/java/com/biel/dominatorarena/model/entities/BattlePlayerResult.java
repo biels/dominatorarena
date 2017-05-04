@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 /**
- * Created by Biel on 29/11/2016.
+ * The result of a specific player in a game
  */
 @Entity
 public class BattlePlayerResult {

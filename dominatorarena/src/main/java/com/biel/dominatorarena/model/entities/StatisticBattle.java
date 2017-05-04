@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by Biel on 28/11/2016.
+ * A battle represented by multiple games
  */
 @Entity
 public class StatisticBattle {

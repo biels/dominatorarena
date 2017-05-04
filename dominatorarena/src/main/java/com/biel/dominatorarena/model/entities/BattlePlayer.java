@@ -3,7 +3,7 @@ package com.biel.dominatorarena.model.entities;
 import javax.persistence.*;
 
 /**
- * Created by Biel on 29/11/2016.
+ * A player in a specific game
  */
 @Entity
 public class BattlePlayer {

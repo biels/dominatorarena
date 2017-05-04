@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 /**
- * Created by Biel on 29/11/2016.
+ * The result of the battle itself (to complete)
  */
 @Entity
 public class BattleResult {

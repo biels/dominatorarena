@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 /**
- * Created by Biel on 4/12/2016.
+ * A chunk of work to be processed by an executor
  */
 @Entity
 public class WorkBlock {

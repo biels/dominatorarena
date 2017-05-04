@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Created by Biel on 28/11/2016.
+ * Every modification of a Strategy. StrategyVersions play the games
  */
 @Entity
 public class StrategyVersion {

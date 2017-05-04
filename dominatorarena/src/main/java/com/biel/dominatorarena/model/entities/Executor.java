@@ -7,7 +7,7 @@ import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
- * Created by Biel on 29/11/2016.
+ * A registered game executor
  */
 @Entity
 public class Executor {

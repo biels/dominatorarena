@@ -9,7 +9,7 @@ import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
- * Created by Biel on 28/11/2016.
+ * An approach to beat the game, a type of player
  */
 @Entity
 public class Strategy {
@@ -23,7 +23,7 @@ public class Strategy {
     @OneToMany(mappedBy = "strategy")
     List<StrategyVersion> versions;
 
-    Strategy(){
+    protected Strategy(){
     }
     public Strategy(String name) {
         this.name = name;

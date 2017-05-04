@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by Biel on 29/11/2016.
+ * A specific played game
  */
 @Entity
 public class Battle {
