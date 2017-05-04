@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
  * Created by Biel on 9/12/2016.
  */
 @RestController
-@RequestMapping("/battle")
+@RequestMapping("/battles/service")
 public class BattleService {
     @Autowired
     StatisticBattleGenerator statisticBattleGenerator;

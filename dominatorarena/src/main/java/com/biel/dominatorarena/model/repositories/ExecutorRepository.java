@@ -10,6 +10,6 @@ import java.util.List;
  * Created by Biel on 29/11/2016.
  */
 public interface ExecutorRepository extends CrudRepository<Executor, Long> {
-    Collection<Executor> findAll();
+    List<Executor> findAll();
     //List<Executor> findByWorkBlocks_();
 }

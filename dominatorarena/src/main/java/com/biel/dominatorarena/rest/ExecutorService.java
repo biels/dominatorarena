@@ -19,12 +19,12 @@ import java.util.Collection;
  * Created by Biel on 29/11/2016.
  */
 @RestController
-@RequestMapping("/executors")
+@RequestMapping("/executors/service")
 public class ExecutorService {
     @Autowired
     ExecutorRepository executorRepository;
 
-    //@RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     Collection<Executor> list(){
         return executorRepository.findAll();
     }

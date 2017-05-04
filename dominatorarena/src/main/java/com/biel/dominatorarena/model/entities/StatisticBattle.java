@@ -72,4 +72,13 @@ public class StatisticBattle {
     public void setActive(boolean active) {
         this.active = active;
     }
+
+    //Metrics (from battles)
+    /*
+        + Max Min
+        + Mean, Standard deviation
+        + Winratio
+        + Jutge winratio (1st and 2nd places count as win)
+        + CPU time / player, total
+     */
 }
