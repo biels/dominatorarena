@@ -1,14 +1,15 @@
 package com.biel.dominatorarena.ui;
 
 import com.biel.dominatorarena.logic.AutoStrategyVersionImporter;
+import com.biel.dominatorarena.model.entities.Executor;
 import com.biel.dominatorarena.model.entities.Strategy;
 import com.biel.dominatorarena.model.entities.StrategyVersion;
+import com.biel.dominatorarena.model.repositories.ExecutorRepository;
 import com.biel.dominatorarena.model.repositories.StrategyRepository;
-import com.vaadin.addon.jpacontainer.JPAContainer;
-import com.vaadin.data.util.BeanItemContainer;
-import com.vaadin.data.util.IndexedContainer;
+import com.biel.dominatorarena.model.repositories.StrategyVersionRepository;
+import com.vaadin.annotations.Theme;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.shared.ui.label.ContentMode;
+import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +25,14 @@ import java.util.stream.Collectors;
  * Created by Biel on 1/12/2016.
  */
 @SpringUI
+@Theme("valo")
 public class MainUI extends UI {
     @Autowired
     StrategyRepository strategyRepository;
+    @Autowired
+    StrategyVersionRepository strategyVersionRepository;
+    @Autowired
+    ExecutorRepository executorRepository;
     @Autowired
     AutoStrategyVersionImporter autoStrategyVersionImporter;
     @Override
@@ -43,10 +49,10 @@ public class MainUI extends UI {
         ListSelect select = new ListSelect("Strategies");
 
         // Add some items (here by the item ID as the caption)
-        Collection<Strategy> all = strategyRepository.findAll();
-        select.addItems(all.stream().map(Strategy::getName).collect(Collectors.toList()));
-
-        select.setNullSelectionAllowed(true);
+//        Collection<Strategy> all = strategyRepository.findAll();
+//        select.addItems(all.stream().map(Strategy::getName).collect(Collectors.toList()));
+//
+//        select.setNullSelectionAllowed(true);
 
         // Show 5 items and a scrollbar if there are more
         select.setRows(5);
@@ -89,27 +95,38 @@ public class MainUI extends UI {
     protected VerticalLayout strategyExplorer(){
         VerticalLayout layout = new VerticalLayout();
         layout.setWidth(20, Unit.PERCENTAGE);
+
+        Grid<Executor> executorGrid = new Grid<>(Executor.class);
+        executorGrid.setDataProvider((sortOrder, offset, limit) -> executorRepository.findAll().stream(), () -> (int) executorRepository.count());
+
+        layout.addComponent(executorGrid);
+
+        Grid<StrategyVersion> strategyVersionGrid = new Grid<>(StrategyVersion.class);
+        strategyVersionGrid.setDataProvider((sortOrder, offset, limit) -> strategyVersionRepository.findAll().stream(), () -> (int) strategyVersionRepository.count());
+
+        layout.addComponent(strategyVersionGrid);
         //Panels
         Panel strategyPanel = new Panel("Strategies");
+
         layout.addComponent(strategyPanel);
         strategyPanel.setSizeFull();
         Panel strategyVersionPanel = new Panel("Strategy versions");
         layout.addComponent(strategyVersionPanel);
         strategyVersionPanel.setSizeFull();
         //Tables
-        IndexedContainer strategyIndexedContainer = new IndexedContainer();
-        JPAContainer<Strategy> strategyJPAContainer = new JPAContainer<>(Strategy.class);
-        //strategyJPAContainer.setEntityProvider();
+//        IndexedContainer strategyIndexedContainer = new IndexedContainer();
+//        //JPAContainer<Strategy> strategyJPAContainer = new JPAContainer<>(Strategy.class);
+//        //strategyJPAContainer.setEntityProvider();
+//
+//        strategyIndexedContainer.addContainerProperty("Name", String.class, "[Unnamed]");
+//        strategyIndexedContainer.addContainerProperty("Volume", Double.class, -1.0D);
 
-        strategyIndexedContainer.addContainerProperty("Name", String.class, "[Unnamed]");
-        strategyIndexedContainer.addContainerProperty("Volume", Double.class, -1.0D);
-
-        Table tblStrategies = new Table("Strategy table", strategyIndexedContainer);
-        Collection<Strategy> all = strategyRepository.findAll();
-        BeanItemContainer newDataSource = new BeanItemContainer(Strategy.class);
-        newDataSource.addAll(all);
-        tblStrategies.setContainerDataSource(newDataSource);
-        layout.addComponent(tblStrategies);
+//        Table tblStrategies = new Table("Strategy table", strategyIndexedContainer);
+//        Collection<Strategy> all = strategyRepository.findAll();
+//        BeanItemContainer newDataSource = new BeanItemContainer(Strategy.class);
+//        newDataSource.addAll(all);
+//        tblStrategies.setContainerDataSource(newDataSource);
+//        layout.addComponent(tblStrategies);
         return layout;
     }
 }

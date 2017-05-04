@@ -13,6 +13,7 @@ import java.util.Optional;
  * Created by Biel on 28/11/2016.
  */
 public interface StrategyVersionRepository extends CrudRepository<StrategyVersion, Long> {
+    List<StrategyVersion> findAll();
     Optional<StrategyVersion> findOneByDigest(byte[] digest);
     List<StrategyVersion> findByStatisticBattles(StatisticBattle statisticBattle);
     List<StrategyVersion> findByStatisticBattles_Battles_WorkBlock(WorkBlock workBlock);
