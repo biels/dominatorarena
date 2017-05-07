@@ -6,6 +6,7 @@ import java.util.List;
  * Created by Biel on 4/12/2016.
  */
 public class WorkBlockResponse {
+    int workBlockId;
     //Files
     List<ConfigurationResponse> configurationResponses;
     List<StrategyVersionResponse> strategyVersionResponses;
@@ -15,10 +16,19 @@ public class WorkBlockResponse {
     protected WorkBlockResponse() {
     }
 
-    public WorkBlockResponse(List<ConfigurationResponse> configurationResponses, List<StrategyVersionResponse> strategyVersionResponses, List<BattleResponse> battleResponses) {
+    public WorkBlockResponse(int workBlockId, List<ConfigurationResponse> configurationResponses, List<StrategyVersionResponse> strategyVersionResponses, List<BattleResponse> battleResponses) {
+        this.workBlockId = workBlockId;
         this.configurationResponses = configurationResponses;
         this.strategyVersionResponses = strategyVersionResponses;
         this.battleResponses = battleResponses;
+    }
+
+    public int getWorkBlockId() {
+        return workBlockId;
+    }
+
+    public void setWorkBlockId(int workBlockId) {
+        this.workBlockId = workBlockId;
     }
 
     public List<ConfigurationResponse> getConfigurationResponses() {

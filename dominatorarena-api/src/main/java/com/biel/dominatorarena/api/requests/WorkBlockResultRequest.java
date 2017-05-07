@@ -6,6 +6,7 @@ import java.util.List;
  * Created by Biel on 4/12/2016.
  */
 public class WorkBlockResultRequest {
+    int workBlockId;
     List<BattleResultRequest> battleResultRequests;
 
     protected WorkBlockResultRequest() {
@@ -13,6 +14,14 @@ public class WorkBlockResultRequest {
 
     public WorkBlockResultRequest(List<BattleResultRequest> battleResultRequests) {
         this.battleResultRequests = battleResultRequests;
+    }
+
+    public int getWorkBlockId() {
+        return workBlockId;
+    }
+
+    public void setWorkBlockId(int workBlockId) {
+        this.workBlockId = workBlockId;
     }
 
     public List<BattleResultRequest> getBattleResultRequests() {

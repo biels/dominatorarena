@@ -2,8 +2,13 @@ package com.biel.dominatorarena.rest;
 
 import com.biel.dominatorarena.api.requests.WorkBlockResultRequest;
 import com.biel.dominatorarena.api.responses.*;
+import com.biel.dominatorarena.logic.AutoStrategyVersionImporter;
+import com.biel.dominatorarena.logic.WorkAssigner;
+import com.biel.dominatorarena.model.entities.Executor;
 import com.biel.dominatorarena.model.entities.WorkBlock;
 import com.biel.dominatorarena.model.repositories.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,10 +35,18 @@ public class ExecutorWorkService {
     private WorkBlockRepository workBlockRepository;
     @Autowired
     private ExecutorRepository executorRepository;
+    @Autowired
+    WorkAssigner workAssigner;
+
+    Logger l = LoggerFactory.getLogger(ExecutorWorkService.class);
 
     @RequestMapping(method = RequestMethod.GET)
     ResponseEntity<WorkBlockResponse> getWork(@PathVariable Long executorId){
         Optional<WorkBlock> workBlockOptional = workBlockRepository.findOneByExecutor_Id(executorId);
+        if(!workBlockOptional.isPresent()) {
+            Executor executor = executorRepository.findOne(executorId);
+            workBlockOptional = workAssigner.assignWorkToExecutor(executor);
+        }
         if(!workBlockOptional.isPresent())return new ResponseEntity<>(new WorkBlockResponse(new ArrayList<>(), new ArrayList<>(), new ArrayList<>()), HttpStatus.NO_CONTENT);
         WorkBlock workBlock = workBlockOptional.get();
         //Translate to response
@@ -57,6 +70,7 @@ public class ExecutorWorkService {
     }
     @RequestMapping(method = RequestMethod.POST)
     ResponseEntity<?> postWork(@PathVariable int workerId, @RequestBody WorkBlockResultRequest workBlockResultRequest){
+        l.info("Work block posted");
         return ResponseEntity.ok().build();
     }
 
