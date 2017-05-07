@@ -4,6 +4,7 @@ import com.biel.dominatorarena.api.requests.BattleCreationRequest;
 import com.biel.dominatorarena.logic.StatisticBattleGenerator;
 import com.biel.dominatorarena.model.entities.Battle;
 import com.biel.dominatorarena.model.entities.StatisticBattle;
+import com.biel.dominatorarena.model.entities.Strategy;
 import com.biel.dominatorarena.model.entities.StrategyVersion;
 import com.biel.dominatorarena.model.repositories.BattlePlayerRepository;
 import com.biel.dominatorarena.model.repositories.BattleRepository;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -36,17 +38,22 @@ public class BattleService {
     @RequestMapping(method = RequestMethod.POST)
     ResponseEntity<StatisticBattle> create(@RequestBody BattleCreationRequest battleCreationRequest){
         StatisticBattle result = null;
+
         if(battleCreationRequest.isUsingStrategyId()){
+            List<Strategy> strategyList = battleCreationRequest.getIds().stream()
+                    .map(id -> strategyRepository.findOne(id))
+                    .collect(Collectors.toList());
+            if(strategyList.stream().anyMatch(s -> s == null))return ResponseEntity.badRequest().build();
             statisticBattleGenerator.generateStatisticBattleFromStrategies(
-                    battleCreationRequest.getIds().stream()
-                            .map(id -> strategyRepository.findOne(id))
-                            .collect(Collectors.toList())
+                    strategyList
             );
         }else{
+            List<StrategyVersion> strategyVersionList = battleCreationRequest.getIds().stream()
+                    .map(versionId -> strategyVersionRepository.findOne(versionId))
+                    .collect(Collectors.toList());
+            if(strategyVersionList.stream().anyMatch(s -> s == null))return ResponseEntity.badRequest().build();
             statisticBattleGenerator.generateStatisticBattleFromVersions(
-                    battleCreationRequest.getIds().stream()
-                            .map(versionId -> strategyVersionRepository.findOne(versionId))
-                            .collect(Collectors.toList())
+                    strategyVersionList
             );
         }
         return ResponseEntity.ok(result);

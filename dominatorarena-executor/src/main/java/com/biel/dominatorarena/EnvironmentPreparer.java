@@ -21,12 +21,14 @@ public class EnvironmentPreparer { //TODO Create starting folder
     Logger l = LoggerFactory.getLogger(EnvironmentPreparer.class);
     @Autowired
     LocalInfo localInfo;
-    public void prepareLocalEnvironment() {
+    public boolean prepareLocalEnvironment() {
         File folder = localInfo.getWorkingDir();
-        placeStartingEnvironmentCopy();
-        placeConfigs();
-        placeAIs();
-
+        if(placeStartingEnvironmentCopy()){
+            placeConfigs();
+            placeAIs();
+            return true;
+        }
+        return false;
     }
     private void placeConfigs(){
         localInfo.getWork().getConfigurationResponses().forEach(configurationResponse -> {
@@ -50,14 +52,19 @@ public class EnvironmentPreparer { //TODO Create starting folder
             }
         });
     }
-    private void placeStartingEnvironmentCopy() {
+    private boolean placeStartingEnvironmentCopy() {
         File emptyEnv = localInfo.getEmptyEnv();
-        if(!emptyEnv.exists()) l.error("Starting enviroment folder not found!");
+        if(!emptyEnv.exists()) {
+            l.error("Starting enviroment folder not found!");
+            return false;
+        }
         FileSystemUtils.deleteRecursively(localInfo.getWorkingDir());
         try {
             FileSystemUtils.copyRecursively(emptyEnv, localInfo.getWorkingDir());
+            return true;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return false;
     }
 }

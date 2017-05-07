@@ -24,6 +24,10 @@ public class LocalInfo {
         this.myUri = myUri;
     }
 
+    public int getMyId(){
+        return Integer.parseInt(getLastBitFromUrl(getMyUri().toString()));
+    }
+
     public boolean isRegistered() {
         return registered;
     }
@@ -44,5 +48,11 @@ public class LocalInfo {
     }
     public File getEmptyEnv(){
         return new File("emptyEnv");
+    }
+
+
+    public static String getLastBitFromUrl(final String url){
+        // return url.replaceFirst("[^?]*/(.*?)(?:\\?.*)","$1);" <-- incorrect
+        return url.replaceFirst(".*/([^/?]+).*", "$1");
     }
 }

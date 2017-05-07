@@ -14,18 +14,19 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by Biel on 29/11/2016.
  */
 @RestController
-@RequestMapping("/executors/service")
+@RequestMapping("/executors")
 public class ExecutorService {
     @Autowired
     ExecutorRepository executorRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    Collection<Executor> list(){
+    List<Executor> list(){
         return executorRepository.findAll();
     }
     @RequestMapping(method = RequestMethod.POST)

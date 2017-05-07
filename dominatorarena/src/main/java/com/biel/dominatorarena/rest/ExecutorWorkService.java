@@ -45,12 +45,15 @@ public class ExecutorWorkService {
         Optional<WorkBlock> workBlockOptional = workBlockRepository.findOneByExecutor_Id(executorId);
         if(!workBlockOptional.isPresent()) {
             Executor executor = executorRepository.findOne(executorId);
-            workBlockOptional = workAssigner.assignWorkToExecutor(executor);
+            if(executor != null)
+                workBlockOptional = workAssigner.assignWorkToExecutor(executor);
         }
-        if(!workBlockOptional.isPresent())return new ResponseEntity<>(new WorkBlockResponse(new ArrayList<>(), new ArrayList<>(), new ArrayList<>()), HttpStatus.NO_CONTENT);
+        //If still not present, tell that there is no work to do
+        if(!workBlockOptional.isPresent())
+            return new ResponseEntity<>(new WorkBlockResponse(-1L, new ArrayList<>(), new ArrayList<>(), new ArrayList<>()), HttpStatus.NO_CONTENT);
+
         WorkBlock workBlock = workBlockOptional.get();
         //Translate to response
-
         List<ConfigurationResponse> configurationResponses = configurationRepository.findByBattles_WorkBlock(workBlock).stream()
                 .map(configuration -> new ConfigurationResponse(configuration.getId(), configuration.getName(), configuration.toConfigFileContent()))
                 .collect(Collectors.toList());
@@ -66,11 +69,11 @@ public class ExecutorWorkService {
                     return new BattleResponse(battle.getId(), battle.getSeed(), battle.getConfiguration().getId(), playerResponses);
                 })
                 .collect(Collectors.toList());
-        return new ResponseEntity<>(new WorkBlockResponse(configurationResponses, strategyVersionResponses, battleResponses), HttpStatus.OK);
+        return new ResponseEntity<>(new WorkBlockResponse(workBlock.getId(), configurationResponses, strategyVersionResponses, battleResponses), HttpStatus.OK);
     }
     @RequestMapping(method = RequestMethod.POST)
     ResponseEntity<?> postWork(@PathVariable int workerId, @RequestBody WorkBlockResultRequest workBlockResultRequest){
-        l.info("Work block posted");
+        l.info("Work block #" + workBlockResultRequest.getWorkBlockId() + " received");
         return ResponseEntity.ok().build();
     }
 

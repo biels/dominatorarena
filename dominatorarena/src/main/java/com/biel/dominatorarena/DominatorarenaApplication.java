@@ -2,6 +2,7 @@ package com.biel.dominatorarena;
 
 import com.biel.dominatorarena.model.entities.Configuration;
 import com.biel.dominatorarena.model.repositories.ConfigurationRepository;
+import com.biel.dominatorarena.model.repositories.ExecutorRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,11 +19,12 @@ public class DominatorarenaApplication {
 		SpringApplication.run(DominatorarenaApplication.class, args);
 	}
 	@Bean
-	CommandLineRunner runner(ConfigurationRepository configurationRepository){
+	CommandLineRunner runner(ConfigurationRepository configurationRepository, ExecutorRepository executorRepository){
 		return args -> {
 			FileSystemUtils.deleteRecursively(new File(Config.VERSION_DIR));
 			System.out.println("Printing args: " + args.length);
-
+            //Clear executors
+            executorRepository.deleteAll();
 			//Populate sample configs
 			//TODO
 			Configuration c1 = new Configuration("Cube Default");

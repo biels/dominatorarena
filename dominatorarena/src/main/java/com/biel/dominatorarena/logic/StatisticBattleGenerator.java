@@ -34,6 +34,8 @@ public class StatisticBattleGenerator {
     }
     public StatisticBattle generateStatisticBattleFromVersions(List<StrategyVersion> strategyVersions){
         List<Configuration> configurations = configurationRepository.findAll(); //TODO Configuration selection
-        return statisticBattleRepository.save(new StatisticBattle(strategyVersions, configurations));
+        StatisticBattle statisticBattle = new StatisticBattle(strategyVersions, configurations);
+        statisticBattle.setActive(true);
+        return statisticBattleRepository.save(statisticBattle);
     }
 }

@@ -60,4 +60,9 @@ public class Registerer {
             register();
         }
     }
+
+    public static String getLastBitFromUrl(final String url){
+        // return url.replaceFirst("[^?]*/(.*?)(?:\\?.*)","$1);" <-- incorrect
+        return url.replaceFirst(".*/([^/?]+).*", "$1");
+    }
 }

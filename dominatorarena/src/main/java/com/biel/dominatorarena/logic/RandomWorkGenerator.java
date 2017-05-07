@@ -24,7 +24,7 @@ public class RandomWorkGenerator {
     @Autowired
     private ExecutorRepository executorRepository;
 
-    int nextBattleIndex = -1;
+    int nextBattleIndex = 0;
 
     Random random = new Random();
 

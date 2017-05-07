@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Optional;
+
 /**
  * Created by Biel on 5/12/2016.
  */
@@ -21,30 +23,35 @@ public class WorkRetriever {
     private ResponseEntity<WorkBlockResponse> getWorkBlockResponse() {
         RestTemplate restTemplate = new RestTemplate();
         try {
-            return restTemplate.getForEntity(localInfo.getMyUri() + "/work", WorkBlockResponse.class);
+            String url = localInfo.getMyUri() + "/work";
+            return restTemplate.getForEntity(url, WorkBlockResponse.class);
         } catch (RestClientException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         return null;
     }
-    public WorkBlockResponse getWorkWhenThereIs(){
-        ResponseEntity<WorkBlockResponse> workBlockResponse = getWorkBlockResponse();
+    public WorkBlockResponse getWork(){
+        ResponseEntity<WorkBlockResponse> workBlockResponse;
         while (true){
-            if(workBlockResponse == null){
-                l.info("Server unreachable.");
-                continue;
+            workBlockResponse = getWorkBlockResponse();
+            boolean available = true;
+            if(available && workBlockResponse == null){
+                l.info("Server unreachable. No longer registered");
+                localInfo.setRegistered(false);
+                available = false;
+                return null;
             }
-            if(workBlockResponse.getStatusCode() != HttpStatus.OK){
+            if(available && workBlockResponse.getStatusCode() != HttpStatus.OK){
+                //If code is not 200, it means that there is no work to do
                 l.info("No work to do.");
-            }else{
-                break;
+                available = false;
             }
+            if(available)break;
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            workBlockResponse = getWorkBlockResponse();
         }
         return workBlockResponse.getBody();
     }
