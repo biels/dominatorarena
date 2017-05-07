@@ -1,5 +1,7 @@
 package com.biel.dominatorarena.model.entities;
 
+import org.hibernate.annotations.NaturalId;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -12,6 +14,7 @@ public class Configuration {
     @GeneratedValue
     private Long id;
 
+    @NaturalId
     String name;
 
     String mapName;

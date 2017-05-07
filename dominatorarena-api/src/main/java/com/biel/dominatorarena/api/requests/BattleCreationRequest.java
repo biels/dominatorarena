@@ -1,6 +1,7 @@
 package com.biel.dominatorarena.api.requests;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Biel on 9/12/2016.
@@ -9,9 +10,17 @@ public class BattleCreationRequest {
     boolean usingStrategyId = false;
     List<Long> ids;
 
-    public BattleCreationRequest(boolean usingStrategyId, List<Long> ids) {
+    public BattleCreationRequest() {
+        super();
+    }
+
+    public BattleCreationRequest(boolean usingStrategyId) {
         this.usingStrategyId = usingStrategyId;
-        this.ids = ids;
+    }
+
+    public BattleCreationRequest(boolean usingStrategyId, List<Integer> ids) {
+        this.usingStrategyId = usingStrategyId;
+        this.ids = ids.stream().mapToLong(value -> value).boxed().collect(Collectors.toList());
     }
 
     public boolean isUsingStrategyId() {

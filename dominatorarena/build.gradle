@@ -48,7 +48,13 @@ dependencies {
 	compile('org.springframework.data:spring-data-rest-hal-browser')
 	compile('org.springframework.boot:spring-boot-starter-hateoas')
 	compile('org.springframework.boot:spring-boot-starter-remote-shell')
+
 	compile('com.vaadin:vaadin-spring-boot-starter')
+	compile('org.vaadin.spring.extensions:vaadin-spring-ext-boot')
+	compile('org.vaadin.spring.addons:vaadin-spring-addon-eventbus')
+	compile('org.vaadin:viritin')
+
+
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('com.vaadin.addon:jpacontainer:4.0.0')
 	//compile "org.springframework.shell:spring-shell:1.2.0.M1"

@@ -39,7 +39,7 @@ public class ExecutorWorkService {
         //Translate to response
 
         List<ConfigurationResponse> configurationResponses = configurationRepository.findByBattles_WorkBlock(workBlock).stream()
-                .map(configuration -> new ConfigurationResponse(configuration.getId(), configuration.getContents()))
+                .map(configuration -> new ConfigurationResponse(configuration.getId(), configuration.getName(), configuration.toConfigFileContent()))
                 .collect(Collectors.toList());
         List<StrategyVersionResponse> strategyVersionResponses = strategyVersionRepository.findByStatisticBattles_Battles_WorkBlock(workBlock).stream()
                 .map(strategyVersion -> new StrategyVersionResponse(strategyVersion.getId(), strategyVersion.readSource(), strategyVersion.getStrategy().getName()))

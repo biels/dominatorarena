@@ -5,10 +5,12 @@ package com.biel.dominatorarena.api.responses;
  */
 public class ConfigurationResponse {
     private Long serverId;
+    private String name;
     private String contents;
 
-    public ConfigurationResponse(Long serverId, String contents) {
+    public ConfigurationResponse(Long serverId, String name, String contents) {
         this.serverId = serverId;
+        this.name = name;
         this.contents = contents;
     }
 

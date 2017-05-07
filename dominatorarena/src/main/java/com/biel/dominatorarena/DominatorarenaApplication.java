@@ -1,5 +1,7 @@
 package com.biel.dominatorarena;
 
+import com.biel.dominatorarena.model.entities.Configuration;
+import com.biel.dominatorarena.model.repositories.ConfigurationRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,10 +18,22 @@ public class DominatorarenaApplication {
 		SpringApplication.run(DominatorarenaApplication.class, args);
 	}
 	@Bean
-	CommandLineRunner runner(){
+	CommandLineRunner runner(ConfigurationRepository configurationRepository){
 		return args -> {
 			FileSystemUtils.deleteRecursively(new File(Config.VERSION_DIR));
 			System.out.println("Printing args: " + args.length);
+
+			//Populate sample configs
+			//TODO
+			Configuration c1 = new Configuration("Cube Default");
+			c1.setMapName("cube");
+			configurationRepository.save(c1);
+			Configuration c2 = new Configuration("Plane Default");
+			c2.setMapName("plane");
+			configurationRepository.save(c2);
+			Configuration c3 = new Configuration("Icosahedron default");
+			c3.setMapName("icosahedron");
+			configurationRepository.save(c3);
 		};
 	}
 }

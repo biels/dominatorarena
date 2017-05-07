@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a532a892-f7a0-43ca-adcc-1ed016e5d82a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/SampleService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/ServiceIndex.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/ui/Sample.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/resources/com/biel/dominatorarena/ui/Sample.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/ConfigurationResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/ConfigurationResponse.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/build.gradle" afterPath="$PROJECT_DIR$/../dominatorarena/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/DominatorarenaApplication.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/DominatorarenaApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/Configuration.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/Configuration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StrategyRepository.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StrategyRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StrategyVersionRepository.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StrategyVersionRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/BattleService.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/BattleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/ExecutorWorkService.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/ExecutorWorkService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/StrategyService.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/StrategyService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/ui/MainUI.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/ui/MainUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/resources/application.properties" />
     </list>
@@ -170,11 +177,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BattleResultRequest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BattleResultRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleResultRequest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterWorkerRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/RegisterWorkerRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkBlockResultRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/WorkBlockResultRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BattleCreationRequest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#416#417#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigurationResponse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/ConfigurationResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="79" lean-forward="false" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -589,6 +642,8 @@
         <option value="$PROJECT_DIR$/src/main/java/requests/RegisterWorkerRequest.java" />
         <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/ConfigurationResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java" />
       </list>
     </option>
   </component>
@@ -690,6 +745,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="responses" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1258,16 +1317,16 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.dominatorarena-api [publishMavenJavaPublicationToMavenLocal]" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.dominatorarena-api [jar]" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.dominatorarena-api [publishToMavenLocal]" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.dominatorarena-api [publishToMavenLocal]" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.dominatorarena-api [publishMavenJavaPublicationToMavenLocal]" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.dominatorarena-api [jar]" />
         <item index="3" class="java.lang.String" itemvalue="Gradle.dominatorarena-api [publish]" />
         <item index="4" class="java.lang.String" itemvalue="Gradle.dominatorarena-api [assemble]" />
       </list>
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1493661328904" />
+    <option name="lastUpdateTimestamp" value="1494122390091" />
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
@@ -1285,15 +1344,15 @@
       <workItem from="1480543163613" duration="2039000" />
       <workItem from="1480613261212" duration="665000" />
       <workItem from="1493659916465" duration="2521000" />
-      <workItem from="1494118874252" duration="700000" />
+      <workItem from="1494118874252" duration="4753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5925000" />
+    <option name="totallyTimeSpent" value="9978000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1304,7 +1363,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1312,7 +1371,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25799572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1473,11 +1532,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/ConfigurationResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="79" lean-forward="false" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/WorkBlockResultRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleResultRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/RegisterWorkerRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
