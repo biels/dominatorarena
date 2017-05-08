@@ -54,12 +54,23 @@ public class ExecutorWorkService {
 
         WorkBlock workBlock = workBlockOptional.get();
         //Translate to response
-        List<ConfigurationResponse> configurationResponses = configurationRepository.findByBattles_WorkBlock(workBlock).stream()
-                .map(configuration -> new ConfigurationResponse(configuration.getId(), configuration.getName(), configuration.toConfigFileContent()))
+        List<ConfigurationResponse> configurationResponses =  workBlock.getBattles().stream()
+                .map(b -> b.getConfiguration())
+                .distinct()
+                .map(c -> new ConfigurationResponse(c.getId(), c.getName(), c.toConfigFileContent()))
                 .collect(Collectors.toList());
-        List<StrategyVersionResponse> strategyVersionResponses = strategyVersionRepository.findByStatisticBattles_Battles_WorkBlock(workBlock).stream()
+//                configurationRepository.findByBattles_WorkBlock(workBlock).stream()
+//                .map(configuration -> new ConfigurationResponse(configuration.getId(), configuration.getName(), configuration.toConfigFileContent()))
+//                .collect(Collectors.toList());
+        List<StrategyVersionResponse> strategyVersionResponses = workBlock.getBattles().stream()
+                .flatMap(battle -> battle.getBattlePlayers().stream())
+                .map(battlePlayer -> battlePlayer.getStrategyVersion())
+                .distinct()
                 .map(strategyVersion -> new StrategyVersionResponse(strategyVersion.getId(), strategyVersion.readSource(), strategyVersion.getStrategy().getName()))
                 .collect(Collectors.toList());
+//                strategyVersionRepository.findByStatisticBattles_Battles_WorkBlock(workBlock).stream()
+//                .map(strategyVersion -> new StrategyVersionResponse(strategyVersion.getId(), strategyVersion.readSource(), strategyVersion.getStrategy().getName()))
+//                .collect(Collectors.toList());
 
         List<BattleResponse> battleResponses = workBlock.getBattles().stream()
                 .map(battle -> {

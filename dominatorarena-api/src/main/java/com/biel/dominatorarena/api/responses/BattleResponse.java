@@ -6,13 +6,13 @@ import java.util.List;
  * Created by Biel on 4/12/2016.
  */
 public class BattleResponse {
-    private Long matchId;
+    private Long battleId;
     private Integer seed;
     private Long configurationId;
     private List<PlayerResponse> playerResponses;
 
-    public BattleResponse(Long matchId, Integer seed, Long configurationId, List<PlayerResponse> playerResponses) {
-        this.matchId = matchId;
+    public BattleResponse(Long battleId, Integer seed, Long configurationId, List<PlayerResponse> playerResponses) {
+        this.battleId = battleId;
         this.seed = seed;
         this.configurationId = configurationId;
         this.playerResponses = playerResponses;
@@ -21,12 +21,12 @@ public class BattleResponse {
     protected BattleResponse() {
     }
 
-    public Long getMatchId() {
-        return matchId;
+    public Long getBattleId() {
+        return battleId;
     }
 
-    public void setMatchId(Long matchId) {
-        this.matchId = matchId;
+    public void setBattleId(Long battleId) {
+        this.battleId = battleId;
     }
 
     public Integer getSeed() {
