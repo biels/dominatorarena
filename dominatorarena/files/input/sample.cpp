@@ -1,3 +1,0 @@
-//@Strategy SampleStrategydifferent 
-
-#degfibaafile
