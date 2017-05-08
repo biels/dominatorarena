@@ -39,6 +39,7 @@ public class Worker {
     void mainLoop(){
         registerer.ensureRegistered();
         work = workRetriever.getWork();
+        localInfo.setWork(work);
         if(work == null)return;
         l.info("Processing block " + work.getWorkBlockId() + "...");
         l.info("Preparing local environment.");
@@ -46,10 +47,13 @@ public class Worker {
             l.error("Could not prepare local envionment, closing application.");
             SpringApplication.exit(appContext, () -> 1);
             return;
+        }else{
+            l.info("Environment ready. Starting execution.");
         }
         List<BattleResultRequest> games = gameExecutor.executeGames();
         l.info("Executed " + games.size() + " games. Posting results.");
         WorkBlockResultRequest result = new WorkBlockResultRequest(games);
+        result.setWorkBlockId(work.getWorkBlockId());
         workPoster.postWork(result);
 
     }

@@ -1,10 +1,14 @@
 package com.biel.dominatorarena;
 
 import com.biel.dominatorarena.api.responses.WorkBlockResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.URI;
+import java.util.Scanner;
 
 /**
  * Created by Biel on 5/12/2016.
@@ -15,7 +19,7 @@ public class LocalInfo {
     private boolean registered;
     WorkBlockResponse work;
 
-
+    Logger l = LoggerFactory.getLogger(LocalInfo.class);
     public URI getMyUri() {
         return myUri;
     }
@@ -46,8 +50,20 @@ public class LocalInfo {
     public File getWorkingDir(){
         return new File("working");
     }
+    public File getArenaDir(){
+        return new File(getWorkingDir().getPath() + "/arena");
+    }
     public File getEmptyEnv(){
-        return new File("emptyEnv");
+        File pathFile = new File(getWorkingDir().getPath() + "/copyFrom.txt");
+        String path;
+        try {
+            Scanner scanner = new Scanner(pathFile);
+            path = scanner.nextLine();
+        } catch (FileNotFoundException e) {
+            l.info("Fill " + pathFile.getPath());
+            return null;
+        }
+        return new File(path);
     }
 
 

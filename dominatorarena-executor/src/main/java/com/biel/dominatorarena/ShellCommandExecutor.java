@@ -24,12 +24,18 @@ public class ShellCommandExecutor {
             p.waitFor();
             BufferedReader reader =
                     new BufferedReader(new InputStreamReader(p.getInputStream()));
+            BufferedReader reader_err =
+                    new BufferedReader(new InputStreamReader(p.getErrorStream()));
+
 
             String line = "";
             while ((line = reader.readLine())!= null) {
                 output.append(line + "\n");
             }
-
+            String line_err = "";
+            while ((line_err = reader_err.readLine())!= null) {
+                output.append(line_err + "\n");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
