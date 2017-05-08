@@ -7,6 +7,9 @@ public class BattlePlayerResultRequest {
     private int score;
     private int cpuTime;
 
+    public BattlePlayerResultRequest() {
+    }
+
     public BattlePlayerResultRequest(int score, int cpuTime) {
         this.score = score;
         this.cpuTime = cpuTime;
