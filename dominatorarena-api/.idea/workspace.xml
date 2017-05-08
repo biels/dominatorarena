@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a532a892-f7a0-43ca-adcc-1ed016e5d82a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleResultRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleResultRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/BattleResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/BattleResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/ConfigurationRepository.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/ConfigurationRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/ExecutorWorkService.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/ExecutorWorkService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -173,12 +169,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BattlePlayerResultRequest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BattlePlayerResultRequest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="102">
+              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+              <folding>
+                <element signature="e#333#334#0" expanded="true" />
+                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#400#401#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+                <element signature="e#495#496#0" expanded="true" />
+                <element signature="e#538#539#0" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -223,7 +228,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BattleResponse.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BattleResponse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/BattleResponse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
@@ -672,9 +677,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/WorkBlockResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/WorkBlockResultRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleResultRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/BattleResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java" />
       </list>
     </option>
   </component>
@@ -1378,7 +1383,7 @@
       <workItem from="1480543163613" duration="2039000" />
       <workItem from="1480613261212" duration="665000" />
       <workItem from="1493659916465" duration="2521000" />
-      <workItem from="1494118874252" duration="6844000" />
+      <workItem from="1494118874252" duration="7675000" />
     </task>
     <task id="LOCAL-00001" summary="Added id field to WorkBlockResponse.java and WorkBlockResultRequest.java">
       <created>1494173591243</created>
@@ -1387,11 +1392,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494173591243</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated api to include BattlePlayerResultRequest.java">
+      <created>1494261752737</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1494261752737</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12069000" />
+    <option name="totallyTimeSpent" value="12900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1458,7 +1470,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added id filed to WorkBlockResponse.java and WorkBlockResultRequest.java" />
     <MESSAGE value="Added id field to WorkBlockResponse.java and WorkBlockResultRequest.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added id field to WorkBlockResponse.java and WorkBlockResultRequest.java" />
+    <MESSAGE value="Updated api to include BattlePlayerResultRequest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated api to include BattlePlayerResultRequest.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1659,14 +1672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleResultRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1687,6 +1692,23 @@
         <state relative-caret-position="476">
           <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
