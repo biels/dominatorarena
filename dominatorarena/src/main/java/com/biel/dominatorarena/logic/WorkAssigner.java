@@ -22,7 +22,7 @@ public class WorkAssigner {
     @Autowired
     RandomWorkGenerator randomWorkGenerator;
     public Optional<WorkBlock> assignWorkToExecutor(Executor executor){
-        int n = executor.getCpuCoreCount() * 40 + 20;
+        int n = executor.getCpuCoreCount() * 25 + 40;
         Optional<WorkBlock> workBlockOptional = randomWorkGenerator.generateNextWorkBlock(n);
         if(!workBlockOptional.isPresent()) return Optional.empty();
         WorkBlock workBlock = workBlockOptional.get();

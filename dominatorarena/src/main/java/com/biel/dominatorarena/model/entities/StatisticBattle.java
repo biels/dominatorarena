@@ -1,6 +1,10 @@
 package com.biel.dominatorarena.model.entities;
 
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
+
 import javax.persistence.*;
+import javax.validation.constraints.Null;
 import java.util.List;
 
 /**
@@ -8,6 +12,7 @@ import java.util.List;
  */
 @Entity
 public class StatisticBattle {
+
     @Id
     @GeneratedValue
     private Long id;
@@ -24,6 +29,10 @@ public class StatisticBattle {
     private List<Battle> battles;
 
     private boolean active = false;
+
+    @OneToOne(cascade = CascadeType.ALL, optional = true, orphanRemoval = true)
+    @NotFound(action = NotFoundAction.IGNORE)
+    private StatisticBattleReport report;
 
     protected StatisticBattle() {
     }
@@ -73,12 +82,11 @@ public class StatisticBattle {
         this.active = active;
     }
 
-    //Metrics (from battles)
-    /*
-        + Max Min
-        + Mean, Standard deviation
-        + Winratio
-        + Jutge winratio (1st and 2nd places count as win)
-        + CPU time / player, total
-     */
+    public StatisticBattleReport getReport() {
+        return report;
+    }
+
+    public void setReport(StatisticBattleReport report) {
+        this.report = report;
+    }
 }

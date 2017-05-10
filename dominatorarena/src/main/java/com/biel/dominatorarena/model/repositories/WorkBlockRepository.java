@@ -13,5 +13,6 @@ import java.util.Optional;
 public interface WorkBlockRepository extends CrudRepository<WorkBlock, Long> {
     List<WorkBlock> findByExecutor(Executor executor);
     Optional<WorkBlock> findOneByExecutor_Id(Long id);
+    Optional<WorkBlock> findOneByExecutor_IdAndExecutorIsNull(Long id);
     List<WorkBlock> findByExecutorIsNullAndExecutedIsFalse();
 }

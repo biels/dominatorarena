@@ -18,36 +18,16 @@ public class BattlePlayerResult {
     BattlePlayer battlePlayer;
 
     Integer score;
-    Integer cellsPainted;
-    Integer cellsLost;
-
-    Integer witchKills;
-    Integer knightKills;
-    Integer knightDeaths;
-    Integer farmerDeaths;
-
-
-    //Integer farmersKilledByWitch;
-    //Integer farmersLostByWitch;
+    Integer place;
+    double cpuTime;
+    //Kills, bonusPicked, ...
 
 
     protected BattlePlayerResult() {
     }
 
-    public BattlePlayerResult(BattlePlayer battlePlayer, Integer score, Integer cellsPainted, Integer cellsLost, Integer witchKills, Integer knightKills, Integer knightDeaths, Integer farmerDeaths) {
+    public BattlePlayerResult(BattlePlayer battlePlayer) {
         this.battlePlayer = battlePlayer;
-        this.score = score;
-        this.cellsPainted = cellsPainted;
-        this.cellsLost = cellsLost;
-        this.witchKills = witchKills;
-        this.knightKills = knightKills;
-        this.knightDeaths = knightDeaths;
-        this.farmerDeaths = farmerDeaths;
-    }
-
-    public BattlePlayerResult(BattlePlayer battlePlayer, Integer score) {
-        this.battlePlayer = battlePlayer;
-        this.score = score;
     }
 
     public Long getId() {
@@ -74,51 +54,19 @@ public class BattlePlayerResult {
         this.score = score;
     }
 
-    public Integer getCellsPainted() {
-        return cellsPainted;
+    public Integer getPlace() {
+        return place;
     }
 
-    public void setCellsPainted(Integer cellsPainted) {
-        this.cellsPainted = cellsPainted;
+    public void setPlace(Integer place) {
+        this.place = place;
     }
 
-    public Integer getCellsLost() {
-        return cellsLost;
+    public double getCpuTime() {
+        return cpuTime;
     }
 
-    public void setCellsLost(Integer cellsLost) {
-        this.cellsLost = cellsLost;
-    }
-
-    public Integer getWitchKills() {
-        return witchKills;
-    }
-
-    public void setWitchKills(Integer witchKills) {
-        this.witchKills = witchKills;
-    }
-
-    public Integer getKnightKills() {
-        return knightKills;
-    }
-
-    public void setKnightKills(Integer knightKills) {
-        this.knightKills = knightKills;
-    }
-
-    public Integer getKnightDeaths() {
-        return knightDeaths;
-    }
-
-    public void setKnightDeaths(Integer knightDeaths) {
-        this.knightDeaths = knightDeaths;
-    }
-
-    public Integer getFarmerDeaths() {
-        return farmerDeaths;
-    }
-
-    public void setFarmerDeaths(Integer farmerDeaths) {
-        this.farmerDeaths = farmerDeaths;
+    public void setCpuTime(double cpuTime) {
+        this.cpuTime = cpuTime;
     }
 }

@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a532a892-f7a0-43ca-adcc-1ed016e5d82a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../dominatorarena/files/input/sample.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../dominatorarena/files/input/sample2.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../dominatorarena/files/input/sample3.cpp" afterPath="" />
+    <list default="true" id="a532a892-f7a0-43ca-adcc-1ed016e5d82a" name="Default" comment="Added public constructor to BattlePlayerResultRequest.java">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/StatisticBattleReportGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StatisticBattleReport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StatisticBattleReportSVResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/projections/InlineStatisticBattleReport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/projections/InlineStatisticBattleReportSVResultRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/BattlePlayerResultRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/BattleResultRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StatisticBattleReportRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StatisticBattleReportSVResultRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/build.gradle" afterPath="$PROJECT_DIR$/../dominatorarena/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/DominatorarenaApplication.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/DominatorarenaApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/RandomWorkGenerator.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/RandomWorkGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/WorkAssigner.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/WorkAssigner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/Battle.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/Battle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/BattlePlayerResult.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/BattlePlayerResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/BattleResult.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/BattleResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StatisticBattle.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StatisticBattle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/ExecutorRepository.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/ExecutorRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/WorkBlockRepository.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/WorkBlockRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/ExecutorWorkService.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/ExecutorWorkService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -160,12 +177,12 @@
             <state relative-caret-position="170">
               <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
               <folding>
-                <element signature="e#583#584#0" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
-                <element signature="e#660#661#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#778#779#0" expanded="true" />
-                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#583#584#0" expanded="false" />
+                <element signature="e#614#615#0" expanded="false" />
+                <element signature="e#660#661#0" expanded="false" />
+                <element signature="e#700#701#0" expanded="false" />
+                <element signature="e#778#779#0" expanded="false" />
+                <element signature="e#827#828#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -174,18 +191,9 @@
       <file leaf-file-name="BattlePlayerResultRequest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-              <folding>
-                <element signature="e#381#382#0" expanded="true" />
-                <element signature="e#409#410#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
-                <element signature="e#586#587#0" expanded="true" />
-                <element signature="e#624#625#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="425">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -195,7 +203,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-              <folding />
+              <folding>
+                <element signature="e#426#427#0" expanded="false" />
+                <element signature="e#461#462#0" expanded="false" />
+                <element signature="e#514#515#0" expanded="false" />
+                <element signature="e#562#563#0" expanded="false" />
+                <element signature="e#599#600#0" expanded="false" />
+                <element signature="e#632#633#0" expanded="false" />
+                <element signature="e#684#685#0" expanded="false" />
+                <element signature="e#728#729#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -206,10 +223,12 @@
             <state relative-caret-position="136">
               <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding>
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#541#542#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
+                <element signature="e#455#456#0" expanded="false" />
+                <element signature="e#489#490#0" expanded="false" />
+                <element signature="e#541#542#0" expanded="false" />
+                <element signature="e#587#588#0" expanded="false" />
+                <element signature="e#653#654#0" expanded="false" />
+                <element signature="e#696#697#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -221,10 +240,18 @@
             <state relative-caret-position="136">
               <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
               <folding>
-                <element signature="e#847#848#0" expanded="true" />
-                <element signature="e#881#882#0" expanded="true" />
-                <element signature="e#933#934#0" expanded="true" />
-                <element signature="e#979#980#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="false" />
+                <element signature="e#881#882#0" expanded="false" />
+                <element signature="e#933#934#0" expanded="false" />
+                <element signature="e#979#980#0" expanded="false" />
+                <element signature="e#1049#1050#0" expanded="false" />
+                <element signature="e#1094#1095#0" expanded="false" />
+                <element signature="e#1333#1334#0" expanded="false" />
+                <element signature="e#1380#1381#0" expanded="false" />
+                <element signature="e#1611#1612#0" expanded="false" />
+                <element signature="e#1649#1650#0" expanded="false" />
+                <element signature="e#1725#1726#0" expanded="false" />
+                <element signature="e#1779#1780#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -235,7 +262,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
               <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#631#632#0" expanded="false" />
+                <element signature="e#662#663#0" expanded="false" />
+                <element signature="e#708#709#0" expanded="false" />
+                <element signature="e#748#749#0" expanded="false" />
+                <element signature="e#780#781#0" expanded="false" />
+                <element signature="e#807#808#0" expanded="false" />
+                <element signature="e#848#849#0" expanded="false" />
+                <element signature="e#880#881#0" expanded="false" />
+                <element signature="e#920#921#0" expanded="false" />
+                <element signature="e#958#959#0" expanded="false" />
+                <element signature="e#1018#1019#0" expanded="false" />
+                <element signature="e#1072#1073#0" expanded="false" />
+                <element signature="e#1128#1129#0" expanded="false" />
+                <element signature="e#1166#1167#0" expanded="false" />
+                <element signature="e#1242#1243#0" expanded="false" />
+                <element signature="e#1296#1297#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -243,14 +287,22 @@
       <file leaf-file-name="BattleCreationRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="187">
               <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#416#417#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#278#279#0" expanded="false" />
+                <element signature="e#301#302#0" expanded="false" />
+                <element signature="e#362#363#0" expanded="false" />
+                <element signature="e#416#417#0" expanded="false" />
+                <element signature="e#688#689#0" expanded="false" />
+                <element signature="e#726#727#0" expanded="false" />
+                <element signature="e#789#790#0" expanded="false" />
+                <element signature="e#843#844#0" expanded="false" />
+                <element signature="e#877#878#0" expanded="false" />
+                <element signature="e#903#904#0" expanded="false" />
+                <element signature="e#945#946#0" expanded="false" />
+                <element signature="e#975#976#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -261,7 +313,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="79" lean-forward="false" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
-              <folding />
+              <folding>
+                <element signature="e#458#459#0" expanded="false" />
+                <element signature="e#489#490#0" expanded="false" />
+                <element signature="e#537#538#0" expanded="false" />
+                <element signature="e#577#578#0" expanded="false" />
+                <element signature="e#610#611#0" expanded="false" />
+                <element signature="e#641#642#0" expanded="false" />
+                <element signature="e#687#688#0" expanded="false" />
+                <element signature="e#727#728#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -271,7 +332,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="e#192#193#0" expanded="false" />
+                <element signature="e#236#237#0" expanded="false" />
+                <element signature="e#311#312#0" expanded="false" />
+                <element signature="e#344#345#0" expanded="false" />
+                <element signature="e#394#395#0" expanded="false" />
+                <element signature="e#438#439#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -281,7 +349,20 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="e#456#457#0" expanded="false" />
+                <element signature="e#487#488#0" expanded="false" />
+                <element signature="e#533#534#0" expanded="false" />
+                <element signature="e#573#574#0" expanded="false" />
+                <element signature="e#604#605#0" expanded="false" />
+                <element signature="e#631#632#0" expanded="false" />
+                <element signature="e#671#672#0" expanded="false" />
+                <element signature="e#703#704#0" expanded="false" />
+                <element signature="e#734#735#0" expanded="false" />
+                <element signature="e#761#762#0" expanded="false" />
+                <element signature="e#801#802#0" expanded="false" />
+                <element signature="e#833#834#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -697,7 +778,9 @@
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -714,8 +797,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -752,84 +833,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dominatorarena-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dominatorarena-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="responses" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dominatorarena-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dominatorarena-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="requests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dominatorarena-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dominatorarena-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="gradle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -840,6 +843,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1386,6 +1391,8 @@
       <workItem from="1480613261212" duration="665000" />
       <workItem from="1493659916465" duration="2521000" />
       <workItem from="1494118874252" duration="8837000" />
+      <workItem from="1494336703762" duration="1194000" />
+      <workItem from="1494409423680" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="Added id field to WorkBlockResponse.java and WorkBlockResultRequest.java">
       <created>1494173591243</created>
@@ -1419,10 +1426,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14062000" />
+    <option name="totallyTimeSpent" value="15871000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1433,16 +1440,15 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25799572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17430703" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21695095" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1454,6 +1460,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1527,6 +1534,358 @@
     <option name="serverIp" value="localhost" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleResultRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="e#583#584#0" expanded="false" />
+            <element signature="e#614#615#0" expanded="false" />
+            <element signature="e#660#661#0" expanded="false" />
+            <element signature="e#700#701#0" expanded="false" />
+            <element signature="e#778#779#0" expanded="false" />
+            <element signature="e#827#828#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/RegisterWorkerRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="e#426#427#0" expanded="false" />
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#514#515#0" expanded="false" />
+            <element signature="e#562#563#0" expanded="false" />
+            <element signature="e#599#600#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#728#729#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/WorkBlockResultRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="e#455#456#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#541#542#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#653#654#0" expanded="false" />
+            <element signature="e#696#697#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/WorkBlockResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#881#882#0" expanded="false" />
+            <element signature="e#933#934#0" expanded="false" />
+            <element signature="e#979#980#0" expanded="false" />
+            <element signature="e#1049#1050#0" expanded="false" />
+            <element signature="e#1094#1095#0" expanded="false" />
+            <element signature="e#1333#1334#0" expanded="false" />
+            <element signature="e#1380#1381#0" expanded="false" />
+            <element signature="e#1611#1612#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1725#1726#0" expanded="false" />
+            <element signature="e#1779#1780#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/BattleResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#631#632#0" expanded="false" />
+            <element signature="e#662#663#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#848#849#0" expanded="false" />
+            <element signature="e#880#881#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+            <element signature="e#958#959#0" expanded="false" />
+            <element signature="e#1018#1019#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1128#1129#0" expanded="false" />
+            <element signature="e#1166#1167#0" expanded="false" />
+            <element signature="e#1242#1243#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#301#302#0" expanded="false" />
+            <element signature="e#362#363#0" expanded="false" />
+            <element signature="e#416#417#0" expanded="false" />
+            <element signature="e#688#689#0" expanded="false" />
+            <element signature="e#726#727#0" expanded="false" />
+            <element signature="e#789#790#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#877#878#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#945#946#0" expanded="false" />
+            <element signature="e#975#976#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/ConfigurationResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="79" lean-forward="false" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
+          <folding>
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#610#611#0" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#727#728#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/PlayerResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#192#193#0" expanded="false" />
+            <element signature="e#236#237#0" expanded="false" />
+            <element signature="e#311#312#0" expanded="false" />
+            <element signature="e#344#345#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+            <element signature="e#438#439#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/StrategyVersionResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#456#457#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#533#534#0" expanded="false" />
+            <element signature="e#573#574#0" expanded="false" />
+            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#631#632#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
+            <element signature="e#703#704#0" expanded="false" />
+            <element signature="e#734#735#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleResultRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="e#583#584#0" expanded="false" />
+            <element signature="e#614#615#0" expanded="false" />
+            <element signature="e#660#661#0" expanded="false" />
+            <element signature="e#700#701#0" expanded="false" />
+            <element signature="e#778#779#0" expanded="false" />
+            <element signature="e#827#828#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/RegisterWorkerRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="e#426#427#0" expanded="false" />
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#514#515#0" expanded="false" />
+            <element signature="e#562#563#0" expanded="false" />
+            <element signature="e#599#600#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#728#729#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/WorkBlockResultRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="e#455#456#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#541#542#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#653#654#0" expanded="false" />
+            <element signature="e#696#697#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/WorkBlockResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#881#882#0" expanded="false" />
+            <element signature="e#933#934#0" expanded="false" />
+            <element signature="e#979#980#0" expanded="false" />
+            <element signature="e#1049#1050#0" expanded="false" />
+            <element signature="e#1094#1095#0" expanded="false" />
+            <element signature="e#1333#1334#0" expanded="false" />
+            <element signature="e#1380#1381#0" expanded="false" />
+            <element signature="e#1611#1612#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1725#1726#0" expanded="false" />
+            <element signature="e#1779#1780#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/BattleResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#631#632#0" expanded="false" />
+            <element signature="e#662#663#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#848#849#0" expanded="false" />
+            <element signature="e#880#881#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+            <element signature="e#958#959#0" expanded="false" />
+            <element signature="e#1018#1019#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1128#1129#0" expanded="false" />
+            <element signature="e#1166#1167#0" expanded="false" />
+            <element signature="e#1242#1243#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#301#302#0" expanded="false" />
+            <element signature="e#362#363#0" expanded="false" />
+            <element signature="e#416#417#0" expanded="false" />
+            <element signature="e#688#689#0" expanded="false" />
+            <element signature="e#726#727#0" expanded="false" />
+            <element signature="e#789#790#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#877#878#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#945#946#0" expanded="false" />
+            <element signature="e#975#976#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/ConfigurationResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="79" lean-forward="false" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
+          <folding>
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#610#611#0" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#727#728#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/PlayerResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#192#193#0" expanded="false" />
+            <element signature="e#236#237#0" expanded="false" />
+            <element signature="e#311#312#0" expanded="false" />
+            <element signature="e#344#345#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+            <element signature="e#438#439#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/StrategyVersionResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#456#457#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#533#534#0" expanded="false" />
+            <element signature="e#573#574#0" expanded="false" />
+            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#631#632#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
+            <element signature="e#703#704#0" expanded="false" />
+            <element signature="e#734#735#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1539,7 +1898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="69" lean-forward="false" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1547,7 +1905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1563,7 +1920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1580,7 +1936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1590,7 +1945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1598,7 +1952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="69" lean-forward="false" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1614,7 +1967,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="79" lean-forward="false" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
-          <folding />
+          <folding>
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#610#611#0" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#727#728#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1622,7 +1984,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#456#457#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#533#534#0" expanded="false" />
+            <element signature="e#573#574#0" expanded="false" />
+            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#631#632#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
+            <element signature="e#703#704#0" expanded="false" />
+            <element signature="e#734#735#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1631,10 +2006,12 @@
         <state relative-caret-position="136">
           <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#541#542#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#653#654#0" expanded="false" />
+            <element signature="e#696#697#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1643,27 +2020,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding />
+          <folding>
+            <element signature="e#426#427#0" expanded="false" />
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#514#515#0" expanded="false" />
+            <element signature="e#562#563#0" expanded="false" />
+            <element signature="e#599#600#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#728#729#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/RegisterWorkerResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/RegisterWorkerResponse.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/WorkBlockResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
           <folding>
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#933#934#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#881#882#0" expanded="false" />
+            <element signature="e#933#934#0" expanded="false" />
+            <element signature="e#979#980#0" expanded="false" />
+            <element signature="e#1049#1050#0" expanded="false" />
+            <element signature="e#1094#1095#0" expanded="false" />
+            <element signature="e#1333#1334#0" expanded="false" />
+            <element signature="e#1380#1381#0" expanded="false" />
+            <element signature="e#1611#1612#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1725#1726#0" expanded="false" />
+            <element signature="e#1779#1780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1672,20 +2059,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#192#193#0" expanded="false" />
+            <element signature="e#236#237#0" expanded="false" />
+            <element signature="e#311#312#0" expanded="false" />
+            <element signature="e#344#345#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+            <element signature="e#438#439#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="187">
           <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#301#302#0" expanded="false" />
+            <element signature="e#362#363#0" expanded="false" />
+            <element signature="e#416#417#0" expanded="false" />
+            <element signature="e#688#689#0" expanded="false" />
+            <element signature="e#726#727#0" expanded="false" />
+            <element signature="e#789#790#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#877#878#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#945#946#0" expanded="false" />
+            <element signature="e#975#976#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1695,12 +2097,12 @@
         <state relative-caret-position="170">
           <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding>
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="false" />
+            <element signature="e#614#615#0" expanded="false" />
+            <element signature="e#660#661#0" expanded="false" />
+            <element signature="e#700#701#0" expanded="false" />
+            <element signature="e#778#779#0" expanded="false" />
+            <element signature="e#827#828#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1709,24 +2111,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#631#632#0" expanded="false" />
+            <element signature="e#662#663#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#848#849#0" expanded="false" />
+            <element signature="e#880#881#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+            <element signature="e#958#959#0" expanded="false" />
+            <element signature="e#1018#1019#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1128#1129#0" expanded="false" />
+            <element signature="e#1166#1167#0" expanded="false" />
+            <element signature="e#1242#1243#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#586#587#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="425">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

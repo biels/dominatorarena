@@ -33,11 +33,9 @@ public class Battle {
     }
 
 
-    public Battle(StatisticBattle statisticBattle, Integer seed, Configuration configuration, List<BattlePlayer> battlePlayers) {
+    public Battle(StatisticBattle statisticBattle, Configuration configuration) {
         this.statisticBattle = statisticBattle;
-        this.seed = seed;
         this.configuration = configuration;
-        this.battlePlayers = battlePlayers;
     }
 
     public Long getId() {
