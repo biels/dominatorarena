@@ -62,8 +62,9 @@ public class EnvironmentPreparer { //TODO Create starting folder
         localInfo.getWork().getStrategyVersionResponses().forEach(strategyVersionResponse -> {
             boolean binary = false;
             String ext = ".cc";
-            if (strategyVersionResponse.getCompiled().length > 0) {
+            if (strategyVersionResponse.getCompiled() != null) {
                 ext = ".o";
+                binary = true;
             }
             String pathname = localInfo.getArenaDir() + "/" + "AIs_" + strategyVersionResponse.getServerId() + ext;
             File sFile = new File(pathname);
