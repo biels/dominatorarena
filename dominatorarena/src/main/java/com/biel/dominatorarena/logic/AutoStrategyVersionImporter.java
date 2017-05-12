@@ -58,7 +58,7 @@ public class AutoStrategyVersionImporter {
                 if((Objects.equals(ext, "cpp") || Objects.equals(ext, "cc"))){
                     compiled = false;
                 }
-                if((Objects.equals(ext, "o") || Objects.equals(ext, "obj")){
+                if((Objects.equals(ext, "o") || Objects.equals(ext, "obj"))){
                     compiled = true;
                 }
 
@@ -106,7 +106,7 @@ public class AutoStrategyVersionImporter {
         File sourceFile = strategyVersion.getSourceFile();
         Files.createDirectories(sourceFile.toPath().getParent());
         Files.copy(file.toPath(), sourceFile.toPath());
-        return  strategyVersion;
+        return   strategyVersionRepository.save(strategyVersion);
     }
     private String getStrategyNameFromFileName(String filename){
         String prefix = "AI";

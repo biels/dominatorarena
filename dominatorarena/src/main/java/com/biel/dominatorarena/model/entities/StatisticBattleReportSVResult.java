@@ -144,4 +144,9 @@ public class StatisticBattleReportSVResult {
     public void setAveragePlace(double place) {
         this.averagePlace = place;
     }
+
+    public double getEffectiveness(){
+        double wrEqual = inGamePlayerMultiplicity / (double) 4;
+        return (winRatio - wrEqual) / wrEqual;
+    }
 }

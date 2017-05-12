@@ -43,6 +43,7 @@ public class StatisticBattleReportGenerator {
             svResult.setInGamePlayerMultiplicity(filteredBattlePlayers.stream().mapToInt(List::size).average().getAsDouble());
             List<BattlePlayerResult> fbpResults = filteredBattlePlayers.stream()
                     .flatMap(fbpl -> fbpl.stream())
+                    .filter(fbp -> fbp.getResult() != null)
                     .map(BattlePlayer::getResult)
                     .collect(Collectors.toList());
             List<Integer> scores = fbpResults.stream().map(BattlePlayerResult::getScore).collect(Collectors.toList());

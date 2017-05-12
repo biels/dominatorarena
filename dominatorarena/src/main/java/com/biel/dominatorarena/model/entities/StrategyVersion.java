@@ -95,10 +95,12 @@ public class StrategyVersion {
         return reduce.orElse("File not found");
     }
     public byte[] readCompiledBytes(){
+        byte[] bytes = new byte[0];
         try {
-            return Files.readAllBytes(getSourceFile().toPath());
+            bytes = Files.readAllBytes(getSourceFile().toPath());
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return bytes;
     }
 }

@@ -18,10 +18,10 @@ public class Strategy {
     private Long id;
 
     @NaturalId
-    String name;
+    private String name;
 
     @OneToMany(mappedBy = "strategy")
-    List<StrategyVersion> versions;
+    private List<StrategyVersion> versions;
 
     protected Strategy(){
     }

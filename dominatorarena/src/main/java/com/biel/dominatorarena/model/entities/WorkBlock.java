@@ -17,7 +17,7 @@ public class WorkBlock {
 
     boolean executed;
 
-    @OneToMany(mappedBy = "workBlock")
+    @OneToMany(mappedBy = "workBlock", cascade = CascadeType.ALL)
     Set<Battle> battles;
 
     protected WorkBlock() {
