@@ -76,7 +76,15 @@ public class ExecutorWorkService {
                 .flatMap(battle -> battle.getBattlePlayers().stream())
                 .map(battlePlayer -> battlePlayer.getStrategyVersion())
                 .distinct()
-                .map(strategyVersion -> new StrategyVersionResponse(strategyVersion.getId(), strategyVersion.readSource(), strategyVersion.getStrategy().getName()))
+                .map(strategyVersion -> {
+                    StrategyVersionResponse strategyVersionResponse = new StrategyVersionResponse(strategyVersion.getId(), strategyVersion.getStrategy().getName());
+                    if(strategyVersion.isCompiled()){
+                        strategyVersionResponse.setCompiled(strategyVersion.readCompiledBytes());
+                    }else{
+                        strategyVersionResponse.setCode(strategyVersion.readSource());
+                    }
+                    return strategyVersionResponse;
+                })
                 .collect(Collectors.toList());
 //                strategyVersionRepository.findByStatisticBattles_Battles_WorkBlock(workBlock).stream()
 //                .map(strategyVersion -> new StrategyVersionResponse(strategyVersion.getId(), strategyVersion.readSource(), strategyVersion.getStrategy().getName()))

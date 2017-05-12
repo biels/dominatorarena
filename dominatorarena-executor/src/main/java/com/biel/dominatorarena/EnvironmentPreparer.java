@@ -12,6 +12,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.CopyOption;
 import java.nio.file.Files;
+import java.nio.file.OpenOption;
+import java.nio.file.StandardOpenOption;
 
 /**
  * Created by Biel on 5/12/2016.
@@ -19,12 +21,14 @@ import java.nio.file.Files;
 @Component
 public class EnvironmentPreparer { //TODO Create starting folder
     Logger l = LoggerFactory.getLogger(EnvironmentPreparer.class);
-    @Autowired ShellCommandExecutor shellCommandExecutor;
+    @Autowired
+    ShellCommandExecutor shellCommandExecutor;
     @Autowired
     LocalInfo localInfo;
+
     public boolean prepareLocalEnvironment() {
         File folder = localInfo.getWorkingDir();
-        if(folder.mkdir()){
+        if (folder.mkdir()) {
             l.info("Fill copyFrom.txt");
             try {
                 new File(folder.getPath() + "/copyFrom.txt").createNewFile();
@@ -32,15 +36,16 @@ public class EnvironmentPreparer { //TODO Create starting folder
                 e.printStackTrace();
             }
         }
-        if(placeStartingEnvironmentCopy()){
+        if (placeStartingEnvironmentCopy()) {
             placeConfigs();
             placeAIs();
-            if(!compileEnvironment())return false;
+            if (!compileEnvironment()) return false;
             return true;
         }
         return false;
     }
-    private void placeConfigs(){
+
+    private void placeConfigs() {
         localInfo.getWork().getConfigurationResponses().forEach(configurationResponse -> {
             File cFile = new File(localInfo.getArenaDir() + "/" + "c_" + configurationResponse.getServerId() + ".cnf");
             try {
@@ -52,21 +57,34 @@ public class EnvironmentPreparer { //TODO Create starting folder
             }
         });
     }
-    private void placeAIs(){
+
+    private void placeAIs() {
         localInfo.getWork().getStrategyVersionResponses().forEach(strategyVersionResponse -> {
-            File sFile = new File(localInfo.getArenaDir() + "/" + "AIs_" + strategyVersionResponse.getServerId() + ".cc");
+            boolean binary = false;
+            String ext = ".cc";
+            if (strategyVersionResponse.getCompiled().length > 0) {
+                ext = ".o";
+            }
+            String pathname = localInfo.getArenaDir() + "/" + "AIs_" + strategyVersionResponse.getServerId() + ext;
+            File sFile = new File(pathname);
+
             try {
-                FileWriter fileWriter = new FileWriter(sFile);
-                fileWriter.write(strategyVersionResponse.getCode());
-                fileWriter.flush();
-            } catch (IOException e) {
+                if(binary){
+                    Files.write(sFile.toPath(), strategyVersionResponse.getCompiled(), StandardOpenOption.CREATE);
+                }else {
+                    FileWriter fileWriter = new FileWriter(sFile);
+                    fileWriter.write(strategyVersionResponse.getCode());
+                    fileWriter.flush();
+                }
+            }catch (IOException e) {
                 e.printStackTrace();
             }
         });
     }
+
     private boolean placeStartingEnvironmentCopy() {
         File emptyEnv = localInfo.getEmptyEnv();
-        if(!emptyEnv.exists()) {
+        if (!emptyEnv.exists()) {
             l.info(new File("").getAbsolutePath());
             l.error("Starting enviroment folder not found!");
             return false;
@@ -80,7 +98,8 @@ public class EnvironmentPreparer { //TODO Create starting folder
         }
         return false;
     }
-    private boolean compileEnvironment(){
+
+    private boolean compileEnvironment() {
         //String output = shellCommandExecutor.executeCommandBlocking("sh ./compile.sh", new String[]{}, localInfo.getWorkingDir());
         //if(output.endsWith("failed")) return false;
         Process make;
@@ -89,15 +108,15 @@ public class EnvironmentPreparer { //TODO Create starting folder
             pb.inheritIO();
             pb.directory(localInfo.getWorkingDir());
             File game = new File(localInfo.getArenaDir().getPath() + "/Game");
-            if(game.exists())
+            if (game.exists())
                 game.delete();
             make = pb.start();
             l.info("Compiling arena...");
             make.waitFor();
-            if(game.exists()){
+            if (game.exists()) {
                 l.info("Compilation finished successfully.");
                 return true;
-            }else {
+            } else {
                 l.info("Compilation failed.");
                 return false;
             }

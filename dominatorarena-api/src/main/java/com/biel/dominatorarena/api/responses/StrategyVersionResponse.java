@@ -7,12 +7,11 @@ public class StrategyVersionResponse {
     Long serverId;
     String code;
     String name;
-    //byte[] compiled;
+    byte[] compiled;
 
 
-    public StrategyVersionResponse(Long serverId, String code, String name) {
+    public StrategyVersionResponse(Long serverId, String name) {
         this.serverId = serverId;
-        this.code = code;
         this.name = name;
     }
 
@@ -41,5 +40,13 @@ public class StrategyVersionResponse {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public byte[] getCompiled() {
+        return compiled;
+    }
+
+    public void setCompiled(byte[] compiled) {
+        this.compiled = compiled;
     }
 }

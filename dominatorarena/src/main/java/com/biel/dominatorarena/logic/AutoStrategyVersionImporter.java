@@ -52,7 +52,19 @@ public class AutoStrategyVersionImporter {
             String fileName = file.getName();
             String[] split = fileName.split("\\.");
             //Check extension
-            if(split.length < 1 || !(Objects.equals(split[1], "cpp") || Objects.equals(split[1], "cc")))continue;
+            boolean compiled = false;
+            if(split.length > 1){
+                String ext = split[1];
+                if((Objects.equals(ext, "cpp") || Objects.equals(ext, "cc"))){
+                    compiled = false;
+                }
+                if((Objects.equals(ext, "o") || Objects.equals(ext, "obj")){
+                    compiled = true;
+                }
+
+            }else{
+                continue;
+            }
             //Check if is new version
             byte[] buffer = new byte[(int) file.length()];
             FileInputStream fileInputStream = new FileInputStream(file);
@@ -63,7 +75,8 @@ public class AutoStrategyVersionImporter {
             boolean newVersion = !strategyVersion.isPresent();
             if (newVersion) {
                 try {
-                    imported.add(importVersionFromFile(file, digest));
+                    String filename = split[0];
+                    imported.add(importVersionFromFile(file, digest, filename, compiled));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -74,11 +87,13 @@ public class AutoStrategyVersionImporter {
     }
 
 
-    StrategyVersion importVersionFromFile(File file, byte[] digest) throws Exception {
-        List<SourceAnnotation> sourceAnnotations = readAnnotations(file);
-        SourceAnnotation strategyAnnotation = sourceAnnotations.stream().filter(a -> a.isOfType("Strategy"))
-                .findFirst().orElseThrow(() -> new Exception("Strategy annotation not found"));
-        String strategyName = strategyAnnotation.getArgs().get(0);
+    StrategyVersion importVersionFromFile(File file, byte[] digest, String filename, boolean compiled) throws Exception {
+//        List<SourceAnnotation> sourceAnnotations = readAnnotations(file);
+//        SourceAnnotation strategyAnnotation = sourceAnnotations.stream().filter(a -> a.isOfType("Strategy"))
+//                .findFirst().orElseThrow(() -> new Exception("Strategy annotation not found"));
+        String strategyName = compiled ?
+                getStrategyNameFromFileName(filename) :
+                getStrategyNameFromContents(file);
         Strategy strategy;
         Optional<Strategy> strategyOptional = strategyRepository.findOneByName(strategyName);
         if(!strategyOptional.isPresent()){
@@ -87,12 +102,29 @@ public class AutoStrategyVersionImporter {
             strategy = strategyOptional.get();
         }
         StrategyVersion strategyVersion = strategyVersionRepository.save(new StrategyVersion(strategy, digest));
-        File input = strategyVersion.getSourceFile();
-        Files.createDirectories(input.toPath().getParent());
-        Files.copy(file.toPath(), input.toPath());
+        strategyVersion.setCompiled(compiled);
+        File sourceFile = strategyVersion.getSourceFile();
+        Files.createDirectories(sourceFile.toPath().getParent());
+        Files.copy(file.toPath(), sourceFile.toPath());
         return  strategyVersion;
     }
-
+    private String getStrategyNameFromFileName(String filename){
+        String prefix = "AI";
+        String result = filename;
+        if(filename.startsWith(prefix)){
+            result = filename.substring(prefix.length());
+        }
+        return result;
+    }
+    private String getStrategyNameFromContents(File file) throws Exception {
+        String prefix = "#define PLAYER_NAME";
+        return Files.lines(file.toPath())
+                .filter(s -> s.startsWith(prefix))
+                .findFirst().orElseThrow(() -> new Exception("Could not detect player name definition"))
+                .trim()
+                .substring(prefix.length())
+                .trim();
+    }
 
     private List<SourceAnnotation> readAnnotations(File file) throws IOException {
         return Files.lines(file.toPath()).filter(s -> s.startsWith("//@")).map(s -> s.substring(3)).map(s -> {

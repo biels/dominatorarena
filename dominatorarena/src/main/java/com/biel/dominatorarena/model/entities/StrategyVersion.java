@@ -29,6 +29,8 @@ public class StrategyVersion {
     @NaturalId @Column(length = 16)
     byte[] digest;
 
+    boolean compiled;
+
     protected StrategyVersion() {
     }
 
@@ -70,8 +72,18 @@ public class StrategyVersion {
         this.digest = digest;
     }
 
+    public boolean isCompiled() {
+        return compiled;
+    }
+
+    public void setCompiled(boolean compiled) {
+        this.compiled = compiled;
+    }
+
     public File getSourceFile(){
-        return new File(Config.VERSION_DIR + "/" + getStrategy().getName() + "_" + getId() + ".cpp");
+        String ext = ".cpp";
+        if(compiled) ext = ".o";
+        return new File(Config.VERSION_DIR + "/" + getStrategy().getName() + "_" + getId() + ext);
     }
     public String readSource(){
         Optional<String> reduce = null;
@@ -81,5 +93,12 @@ public class StrategyVersion {
             e.printStackTrace();
         }
         return reduce.orElse("File not found");
+    }
+    public byte[] readCompiledBytes(){
+        try {
+            return Files.readAllBytes(getSourceFile().toPath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

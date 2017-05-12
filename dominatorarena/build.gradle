@@ -41,6 +41,8 @@ dependencyManagement {
 
 dependencies {
 	compile('org.jooq:jool:0.9.12')
+	compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+
 	compile('com.biel.dominatorarena:dominatorarena-api:1.0-SNAPSHOT')
 	//compile('org.springframework.boot:spring-boot-starter-actuator')
 	//compile('org.springframework.boot:spring-boot-actuator-docs')
