@@ -17,6 +17,8 @@ public class BattlePlayer {
     @ManyToOne
     StrategyVersion strategyVersion;
 
+    int slot;
+
     @OneToOne
     BattlePlayerResult result;
 
@@ -49,6 +51,14 @@ public class BattlePlayer {
 
     public void setStrategyVersion(StrategyVersion strategyVersion) {
         this.strategyVersion = strategyVersion;
+    }
+
+    public int getSlot() {
+        return slot;
+    }
+
+    public void setSlot(int slot) {
+        this.slot = slot;
     }
 
     public BattlePlayerResult getResult() {

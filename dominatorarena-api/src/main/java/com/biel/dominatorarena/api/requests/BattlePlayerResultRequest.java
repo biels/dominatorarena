@@ -6,6 +6,7 @@ package com.biel.dominatorarena.api.requests;
 public class BattlePlayerResultRequest {
     private int score;
     private int cpuTime;
+    private int slot;
 
     public BattlePlayerResultRequest() {
     }
@@ -29,5 +30,13 @@ public class BattlePlayerResultRequest {
 
     public void setCpuTime(int cpuTime) {
         this.cpuTime = cpuTime;
+    }
+
+    public int getSlot() {
+        return slot;
+    }
+
+    public void setSlot(int slot) {
+        this.slot = slot;
     }
 }

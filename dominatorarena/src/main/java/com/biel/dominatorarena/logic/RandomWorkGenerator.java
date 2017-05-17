@@ -45,7 +45,7 @@ public class RandomWorkGenerator {
                 })
                 .map(mp -> battlePlayerRepository.save(mp))
                 .collect(Collectors.toList());
-        Collections.shuffle(battlePlayers);
+        if(!statisticBattle.isAllVsFirst())Collections.shuffle(battlePlayers);
         if (battlePlayers.size() > 4) {
             battlePlayers = battlePlayers.subList(0, 3);
         }
@@ -54,6 +54,9 @@ public class RandomWorkGenerator {
             BattlePlayer battlePlayer = new BattlePlayer(battlePlayers.get(battlePlayers.size() - 1).getStrategyVersion());
             battlePlayer.setBattle(battle);
             battlePlayers.add(battlePlayerRepository.save(battlePlayer));
+        }
+        for (int i = 0; i < 4; i++) {
+            battlePlayers.get(i).setSlot(i);
         }
         battle.setBattlePlayers(battlePlayers);
         assert (battle.getBattlePlayers().size() == 4);

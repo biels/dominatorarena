@@ -93,7 +93,7 @@ public class ExecutorWorkService {
         List<BattleResponse> battleResponses = workBlock.getBattles().stream()
                 .map(battle -> {
                     List<PlayerResponse> playerResponses = battle.getBattlePlayers().stream()
-                            .map(battlePlayer -> new PlayerResponse(battlePlayer.getStrategyVersion().getId()))
+                            .map(battlePlayer -> new PlayerResponse(battlePlayer.getStrategyVersion().getId(), battlePlayer.getSlot()))
                             .collect(Collectors.toList());
                     return new BattleResponse(battle.getId(), battle.getSeed(), battle.getConfiguration().getId(), playerResponses);
                 })
@@ -140,7 +140,10 @@ public class ExecutorWorkService {
         workBlockRepository.save(workBlock);
         workBlock.getBattles().stream()
                 .map(b -> b.getStatisticBattle()).distinct()
-                .forEach(sb -> statisticBattleReportGenerator.generateReport(sb));
+                .forEach(sb -> {
+                    if(sb.getBattles().size() >= sb.getRequestedBattleCount())sb.setActive(false);
+                    statisticBattleReportGenerator.generateReport(sb);
+                });
         l.info("Report for block #" + workBlockResultRequest.getWorkBlockId() + " generated");
         return ResponseEntity.ok().build();
     }

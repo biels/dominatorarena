@@ -24,6 +24,10 @@ targetCompatibility = 1.8
 repositories {
     mavenLocal()
 	mavenCentral()
+	flatDir {
+		name "fileRepo"
+		dirs "repo"
+	}
 }
 
 
@@ -32,4 +36,13 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-websocket')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+artifacts{
+
+}
+def target = relativePath("C:/Users/Biel/Google Drive/Assignatures Q4/EDA/Game")
+
+task makeZip(type: Zip) {
+	into buildDir
 }

@@ -33,6 +33,7 @@ public class GameExecutor {
         List<PlayerResponse> players = battle.getPlayerResponses();
         String config = "c_" + battle.getConfigurationId() + ".cnf";
         List<String> playerNames = battle.getPlayerResponses().stream()
+                .sorted(Comparator.comparingInt(PlayerResponse::getSlot))
                 .map(playerResponse -> localInfo.getWork().getStrategyVersionResponses().stream()
                     .filter(strategyVersionResponse -> strategyVersionResponse.getServerId() == playerResponse.getStrategyId())
                     .findFirst().get())
@@ -83,9 +84,11 @@ public class GameExecutor {
         try {
             Scanner scanner = new Scanner(new File(localInfo.getArenaDir().getPath() + "/stats.txt"));
             ArrayList<BattlePlayerResultRequest> battlePlayerResultRequests = new ArrayList<>();
+            int slot = 0;
             while (scanner.hasNext()){
                 int score = scanner.nextInt();
                 BattlePlayerResultRequest battlePlayerResultRequest = new BattlePlayerResultRequest(score, 0);
+                battlePlayerResultRequest.setSlot(slot++);
                 battlePlayerResultRequests.add(battlePlayerResultRequest);
             }
             return new BattleResultRequest(battle.getBattleId(), battlePlayerResultRequests);

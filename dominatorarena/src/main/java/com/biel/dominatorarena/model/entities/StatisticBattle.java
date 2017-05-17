@@ -30,6 +30,9 @@ public class StatisticBattle {
 
     private boolean active = false;
 
+    private boolean allVsFirst = false;
+    private int requestedBattleCount = 1000;
+
     @OneToOne(cascade = CascadeType.ALL, optional = true, orphanRemoval = true)
     @NotFound(action = NotFoundAction.IGNORE)
     private StatisticBattleReport report;
@@ -80,6 +83,22 @@ public class StatisticBattle {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public boolean isAllVsFirst() {
+        return allVsFirst;
+    }
+
+    public void setAllVsFirst(boolean allVsFirst) {
+        this.allVsFirst = allVsFirst;
+    }
+
+    public int getRequestedBattleCount() {
+        return requestedBattleCount;
+    }
+
+    public void setRequestedBattleCount(int requestedBattleCount) {
+        this.requestedBattleCount = requestedBattleCount;
     }
 
     public StatisticBattleReport getReport() {

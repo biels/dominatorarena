@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
  */
 public class BattleCreationRequest {
     boolean usingStrategyId = false;
+    boolean allVsFirst = false;
     List<Long> ids;
 
     public BattleCreationRequest() {
@@ -37,5 +38,13 @@ public class BattleCreationRequest {
 
     public void setIds(List<Long> ids) {
         this.ids = ids;
+    }
+
+    public boolean isAllVsFirst() {
+        return allVsFirst;
+    }
+
+    public void setAllVsFirst(boolean allVsFirst) {
+        this.allVsFirst = allVsFirst;
     }
 }

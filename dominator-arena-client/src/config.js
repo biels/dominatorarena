@@ -1,0 +1,1 @@
+export const baseUrl = 'http://ordinadorcasa.no-ip.org:4000';

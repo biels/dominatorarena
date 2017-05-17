@@ -56,8 +56,10 @@ public class StatisticBattleReportGenerator {
 
             Supplier<IntStream> placeSupplier = () -> places.stream().mapToInt(i -> i);
             svResult.setAveragePlace(placeSupplier.get().average().getAsDouble());
-            svResult.setWinRatio(placeSupplier.get().filter(p -> p == 1).count() / (double)places.size());
-            svResult.setJutgeWinRatio(placeSupplier.get().filter(p -> p == 1 || p == 2).count() / (double)places.size());
+            double battlesWithResult = battles.stream().filter(b -> b.getResult() != null).count();
+            long wonGames = placeSupplier.get().filter(p -> p == 1).count();
+            svResult.setWinRatio(wonGames / battlesWithResult);
+            svResult.setJutgeWinRatio(placeSupplier.get().filter(p -> p == 1 || p == 2).count() / battlesWithResult);
             //scoreSupplier.get().mapToDouble(i -> i)
             //svResult.setScoreStandardDeviation(scoreSupplier.get().collect());
             //svResult.setMaxScore();

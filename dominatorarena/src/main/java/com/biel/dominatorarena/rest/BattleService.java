@@ -45,7 +45,7 @@ public class BattleService {
                     .collect(Collectors.toList());
             if(strategyList.stream().anyMatch(s -> s == null))return ResponseEntity.badRequest().build();
             statisticBattleGenerator.generateStatisticBattleFromStrategies(
-                    strategyList
+                    strategyList, battleCreationRequest.isAllVsFirst()
             );
         }else{
             List<StrategyVersion> strategyVersionList = battleCreationRequest.getIds().stream()
@@ -53,7 +53,7 @@ public class BattleService {
                     .collect(Collectors.toList());
             if(strategyVersionList.stream().anyMatch(s -> s == null))return ResponseEntity.badRequest().build();
             statisticBattleGenerator.generateStatisticBattleFromVersions(
-                    strategyVersionList
+                    strategyVersionList, battleCreationRequest.isAllVsFirst()
             );
         }
         return ResponseEntity.ok(result);

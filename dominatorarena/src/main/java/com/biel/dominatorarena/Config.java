@@ -9,4 +9,5 @@ public class Config {
     public final static String FILES = "files";
     public final static String VERSION_DIR = FILES + "/versions";
     public final static String INPUT_DIR = FILES + "/input";
+    public final static String INPUT_FIRST_DIR = FILES + "/input_first";
 }

@@ -5,9 +5,11 @@ package com.biel.dominatorarena.api.responses;
  */
 public class PlayerResponse {
     private Long strategyId;
+    private int slot;
 
-    public PlayerResponse(Long strategyId) {
+    public PlayerResponse(Long strategyId, int slot) {
         this.strategyId = strategyId;
+        this.slot = slot;
     }
 
     protected PlayerResponse() {
@@ -19,5 +21,13 @@ public class PlayerResponse {
 
     public void setStrategyId(Long strategyId) {
         this.strategyId = strategyId;
+    }
+
+    public int getSlot() {
+        return slot;
+    }
+
+    public void setSlot(int slot) {
+        this.slot = slot;
     }
 }

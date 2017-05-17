@@ -25,16 +25,17 @@ public class StatisticBattleGenerator {
     StatisticBattleRepository statisticBattleRepository;
     @Autowired
     ConfigurationRepository configurationRepository;
-    public StatisticBattle generateStatisticBattleFromStrategies(List<Strategy> strategies){
+    public StatisticBattle generateStatisticBattleFromStrategies(List<Strategy> strategies, boolean allVsFirst){
         List<StrategyVersion> strategyVersions = strategies.stream()
                 .filter(strategy -> strategy.getVersions().size() > 0)
                 .map(strategy -> strategyVersionRepository.findTopByStrategyOrderByIdDesc(strategy))
                 .collect(Collectors.toList());
-        return generateStatisticBattleFromVersions(strategyVersions);
+        return generateStatisticBattleFromVersions(strategyVersions, allVsFirst);
     }
-    public StatisticBattle generateStatisticBattleFromVersions(List<StrategyVersion> strategyVersions){
+    public StatisticBattle generateStatisticBattleFromVersions(List<StrategyVersion> strategyVersions, boolean allVsFirst){
         List<Configuration> configurations = configurationRepository.findAll(); //TODO Configuration selection
         StatisticBattle statisticBattle = new StatisticBattle(strategyVersions, configurations);
+        statisticBattle.setAllVsFirst(allVsFirst);
         statisticBattle.setActive(true);
         return statisticBattleRepository.save(statisticBattle);
     }

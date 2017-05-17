@@ -50,9 +50,10 @@ public class DominatorarenaApplication {
 			c3.setMapName("icosahedron");
 			configurationRepository.save(c3);
 
-			List<StrategyVersion> strategyVersions = autoStrategyVersionImporter.autoImport();
-
-			statisticBattleGenerator.generateStatisticBattleFromVersions(strategyVersions.stream().limit(4).collect(Collectors.toList()));
+			//List<StrategyVersion> strategyVersions = autoStrategyVersionImporter.autoImport();
+			File directoryFirst = new File(Config.INPUT_FIRST_DIR);
+			if(!directoryFirst.exists())Files.createDirectories(directoryFirst.toPath());
+			autoStrategyVersionImporter.importNewVersionsAutomatically(directoryFirst, true);
 		};
 	}
 }

@@ -1,6 +1,7 @@
 package com.biel.dominatorarena.model.entities;
 
 import com.biel.dominatorarena.Config;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -20,7 +21,8 @@ public class StrategyVersion {
     private Long id;
 
     @ManyToOne(optional = false)
-    Strategy strategy;
+    @JsonIgnore
+    private Strategy strategy;
 
     @ManyToMany(mappedBy = "strategyVersions")
     List<StatisticBattle> statisticBattles;
@@ -30,6 +32,9 @@ public class StrategyVersion {
     byte[] digest;
 
     boolean compiled;
+
+    @OneToMany(mappedBy = "strategyVersion", cascade = CascadeType.ALL)
+    List<StrategyVersionFeature> features;
 
     protected StrategyVersion() {
     }
@@ -63,7 +68,12 @@ public class StrategyVersion {
     public void setStatisticBattles(List<StatisticBattle> statisticBattles) {
         this.statisticBattles = statisticBattles;
     }
-
+    public String getStrategyName(){
+        return getStrategy().getName();
+    }
+    public Long getIdentifier(){
+        return getId();
+    }
     public byte[] getDigest() {
         return digest;
     }
@@ -78,6 +88,14 @@ public class StrategyVersion {
 
     public void setCompiled(boolean compiled) {
         this.compiled = compiled;
+    }
+
+    public List<StrategyVersionFeature> getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(List<StrategyVersionFeature> features) {
+        this.features = features;
     }
 
     public File getSourceFile(){

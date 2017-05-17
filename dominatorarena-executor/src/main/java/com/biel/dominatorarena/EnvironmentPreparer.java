@@ -28,14 +28,7 @@ public class EnvironmentPreparer { //TODO Create starting folder
 
     public boolean prepareLocalEnvironment() {
         File folder = localInfo.getWorkingDir();
-        if (folder.mkdir()) {
-            l.info("Fill copyFrom.txt");
-            try {
-                new File(folder.getPath() + "/copyFrom.txt").createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        createWorkingDirSkeleton(folder);
         if (placeStartingEnvironmentCopy()) {
             placeConfigs();
             placeAIs();
@@ -43,6 +36,29 @@ public class EnvironmentPreparer { //TODO Create starting folder
             return true;
         }
         return false;
+    }
+
+    private void createWorkingDirSkeleton(File folder) {
+        if (folder.mkdir()) {
+            l.info("Fill copyFrom.txt");
+            try {
+                new File(folder.getPath() + "/copyFrom.txt").createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                File file = new File(folder.getPath() + "/compile.sh");
+                String script = "#!/bin/sh\ncd arena\nmake all";
+                file.createNewFile();
+                FileWriter fileWriter = new FileWriter(file);
+                fileWriter.write(script);
+                fileWriter.flush();
+                fileWriter.close();
+                file.setExecutable(true);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void placeConfigs() {

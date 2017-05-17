@@ -20,7 +20,7 @@ public class Battle {
     @ManyToOne
     Configuration configuration;
 
-    @OneToMany(mappedBy = "battle")
+    @OneToMany(mappedBy = "battle", cascade = CascadeType.ALL)
     private List<BattlePlayer> battlePlayers;
 
     @OneToOne

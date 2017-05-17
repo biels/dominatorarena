@@ -73,6 +73,13 @@ public class StatisticBattleReportSVResult {
         this.strategyVersion = strategyVersion;
     }
 
+    public String getStrategyName(){
+        return getStrategyVersion().getStrategyName();
+    }
+    public Long getStrategyVersionIdentifier(){
+        return getStrategyVersion().getIdentifier();
+    }
+
     public double getInGamePlayerMultiplicity() {
         return inGamePlayerMultiplicity;
     }
