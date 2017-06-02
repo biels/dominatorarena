@@ -2,54 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a532a892-f7a0-43ca-adcc-1ed016e5d82a" name="Default" comment="Added public constructor to BattlePlayerResultRequest.java">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/files/others/AIJoan6.o" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/StastisticBattleDetails/SVLine.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/StastisticBattleDetails/StatisticBattleDetails.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/StastisticBattleDetails/StatisticBattleDetails.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/StastisticBattleDetails/StrategyVersionTree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/client/client.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/client/follow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/client/utils/uriListConverter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/client/utils/uriTemplateInterceptor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/files/others/AIStar5.cc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/config/WebConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StrategyVersionFeature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StrategyVersionFeatureParam.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/projections/InlineStrategyVersionFeature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/projections/StatisticBattleReportProjection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StrategyVersionFeatureParamRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StrategyVersionFeatureRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../dominatorarena/files/input/AIDummy.o" afterPath="$PROJECT_DIR$/../dominatorarena/files/input_first/AIDummy.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominator-arena-client/package.json" afterPath="$PROJECT_DIR$/../dominator-arena-client/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominator-arena-client/public/index.html" afterPath="$PROJECT_DIR$/../dominator-arena-client/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominator-arena-client/src/App.css" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/App.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominator-arena-client/src/App.js" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominator-arena-client/src/StastisticBattleDetails/StatisticBattleDetails.js" afterPath="$PROJECT_DIR$/../dominator-arena-client/src/StastisticBattleDetails/StatisticBattleDetails.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattleCreationRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/requests/BattlePlayerResultRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/PlayerResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/biel/dominatorarena/api/responses/PlayerResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena-executor/build.gradle" afterPath="$PROJECT_DIR$/../dominatorarena-executor/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena-executor/src/main/java/com/biel/dominatorarena/EnvironmentPreparer.java" afterPath="$PROJECT_DIR$/../dominatorarena-executor/src/main/java/com/biel/dominatorarena/EnvironmentPreparer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena-executor/src/main/java/com/biel/dominatorarena/GameExecutor.java" afterPath="$PROJECT_DIR$/../dominatorarena-executor/src/main/java/com/biel/dominatorarena/GameExecutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/Config.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/DominatorarenaApplication.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/DominatorarenaApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/AutoStrategyVersionImporter.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/AutoStrategyVersionImporter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/RandomWorkGenerator.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/RandomWorkGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/StatisticBattleGenerator.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/StatisticBattleGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/StatisticBattleReportGenerator.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/logic/StatisticBattleReportGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/Battle.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/Battle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/BattlePlayer.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/BattlePlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StatisticBattle.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StatisticBattle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StatisticBattleReportSVResult.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StatisticBattleReportSVResult.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StrategyVersion.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/entities/StrategyVersion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/projections/InlineStrategyVersion.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/projections/InlineStrategyVersion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/ExecutorRepository.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/ExecutorRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StatisticBattleRepository.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StatisticBattleRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StrategyVersionRepository.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/model/repositories/StrategyVersionRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/BattleService.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/BattleService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/ExecutorWorkService.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/ExecutorWorkService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/StrategyService.java" afterPath="$PROJECT_DIR$/../dominatorarena/src/main/java/com/biel/dominatorarena/rest/StrategyService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -1275,7 +1231,7 @@
       <workItem from="1494673076683" duration="1964000" />
       <workItem from="1494756804160" duration="694000" />
       <workItem from="1494838001697" duration="1807000" />
-      <workItem from="1495037698314" duration="889000" />
+      <workItem from="1495037698314" duration="1263000" />
     </task>
     <task id="LOCAL-00001" summary="Added id field to WorkBlockResponse.java and WorkBlockResultRequest.java">
       <created>1494173591243</created>
@@ -1309,7 +1265,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26746000" />
+    <option name="totallyTimeSpent" value="27120000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

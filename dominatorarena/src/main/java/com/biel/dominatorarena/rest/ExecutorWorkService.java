@@ -112,10 +112,15 @@ public class ExecutorWorkService {
         List<BattleResultRequest> battleResultRequests = workBlockResultRequest.getBattleResultRequests();
         battleResultRequests.forEach(battleResultRequest -> {
             Battle battle = battleRepository.findOne(battleResultRequest.getBattleId());
-            List<BattlePlayerResultRequest> battlePlayerResultRequests = battleResultRequest.getBattlePlayerResultRequests();
+            List<BattlePlayerResultRequest> battlePlayerResultRequests = battleResultRequest.getBattlePlayerResultRequests().stream()
+                    .sorted(Comparator.comparingInt(BattlePlayerResultRequest::getSlot))
+                    .collect(Collectors.toList());
             int max = 0, maxi = 0;
+            List<BattlePlayer> sortedBattlePlayers = battle.getBattlePlayers().stream()
+                    .sorted(Comparator.comparingInt(BattlePlayer::getSlot))
+                    .collect(Collectors.toList());
             for (int i = 0; i < battlePlayerResultRequests.size(); i++) {
-                BattlePlayer battlePlayer = battle.getBattlePlayers().get(i);
+                BattlePlayer battlePlayer = sortedBattlePlayers.get(i);
                 BattlePlayerResultRequest battlePlayerResultRequest = battlePlayerResultRequests.get(i);
                 int score = battlePlayerResultRequest.getScore();
                 if (score > max) {
@@ -126,13 +131,13 @@ public class ExecutorWorkService {
                 result.setScore(score);
                 battlePlayer.setResult(battlePlayerResultRepository.save(result));
             }
-            List<BattlePlayerResult> battlePlayerResults = battle.getBattlePlayers().stream()
+            List<BattlePlayerResult> battlePlayerResults = sortedBattlePlayers.stream()
                     .map(bp -> bp.getResult())
                     .sorted((a, b) -> Long.compare(b.getScore(), a.getScore())).collect(Collectors.toList());
             IntStream.range(1, battlePlayerResults.size() + 1)
                     .forEach(i -> battlePlayerResults.get(i-1).setPlace(i));
 
-            BattleResult battleResult = new BattleResult(battle.getBattlePlayers().get(maxi));
+            BattleResult battleResult = new BattleResult(sortedBattlePlayers.get(maxi));
             battleResult.setBattle(battle);
             battle.setResult(battleResultRepository.save(battleResult));
             battleRepository.save(battle);

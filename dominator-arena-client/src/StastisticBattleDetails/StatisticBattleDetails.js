@@ -56,8 +56,10 @@ class StatisticBattleDetails extends Component {
                 return <tr key={i}>
                     <td>{svResult.strategyName + ' (' + svResult.strategyVersionIdentifier + ')'}</td>
                     <td>{(svResult.winRatio * 100).toFixed(2) + '%'}</td>
+                    <td>{(svResult.jutgeWinRatio * 100).toFixed(2) + '%'}</td>
                     <td><span className={'pt-tag ' + intent}>{(svResult.effectiveness * 100).toFixed(2) + '%'}</span>
                     </td>
+                    <td>{(svResult.averageScore).toFixed(2)}</td>
                     <td>{(svResult.averagePlace).toFixed(2)}</td>
                     <td>{(svResult.inGamePlayerMultiplicity).toFixed(2)}</td>
                 </tr>
@@ -68,8 +70,10 @@ class StatisticBattleDetails extends Component {
         var table = <table className={'pt-table pt-striped '}>
             <thead>
             <th>Strategy</th>
-            <th>WinRatio</th>
+            <th>WinRate</th>
+            <th>JutgeWR</th>
             <th>Effectiveness</th>
+            <th>Avg Score</th>
             <th>Avg Place</th>
             <th>Multiplicity</th>
             </thead>

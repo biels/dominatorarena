@@ -31,7 +31,7 @@ public class StatisticBattle {
     private boolean active = false;
 
     private boolean allVsFirst = false;
-    private int requestedBattleCount = 1000;
+    private int requestedBattleCount = 1500;
 
     @OneToOne(cascade = CascadeType.ALL, optional = true, orphanRemoval = true)
     @NotFound(action = NotFoundAction.IGNORE)
