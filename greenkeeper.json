@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "dominator-arena-client/package.json"
+      ]
+    }
+  }
+}
