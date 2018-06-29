@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "1.1.4"
   },
   "dependencies": {
-    "@blueprintjs/core": "^1.16.0",
-    "bootstrap": "3",
+    "@blueprintjs/core": "^2.3.1",
+    "bootstrap": "^4.1.1",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
+    "react": "^16.4.1",
     "react-addons-css-transition-group": "^15.5.2",
-    "react-dom": "^15.5.4",
+    "react-dom": "^16.4.1",
     "requirejs": "^2.3.3",
     "rest": "^2.0.0",
     "restjs": "0.0.8"
